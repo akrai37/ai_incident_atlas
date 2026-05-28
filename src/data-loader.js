@@ -1,8 +1,8 @@
 // Loads pathways.json and orchestrates linked viz + filtering.
-import { renderSankey } from "./sankey.js?v=8";
-import { renderHeatmap } from "./heatmap.js?v=8";
-import { renderDetail } from "./detail-panel.js?v=8";
-import { renderTimeline } from "./timeline.js?v=8";
+import { renderSankey } from "./sankey.js?v=9";
+import { renderHeatmap } from "./heatmap.js?v=9";
+import { renderDetail } from "./detail-panel.js?v=9";
+import { renderTimeline } from "./timeline.js?v=9";
 
 const HARM_COLORS = {
   physical: "var(--harm-physical)",
@@ -15,6 +15,8 @@ const HARM_COLORS = {
 
 const FAILURE_MODES = ["data_bias", "model_error", "spec_gap", "oversight_failure", "misuse"];
 const HARMS = ["physical", "economic", "discriminatory", "psychological", "reputational", "informational"];
+// Same threshold the heatmap uses to hide thin rows. Keep these in sync.
+const MIN_SECTOR_N = 5;
 
 const state = {
   all: [],
@@ -51,9 +53,17 @@ function setupControls() {
   const search = document.getElementById("search");
   const reset = document.getElementById("reset");
 
-  const sectors = Array.from(
-    new Set(state.all.map((d) => d.deployment_context?.sector).filter(Boolean))
-  ).sort();
+  // Only list sectors that the heatmap also renders (n >= MIN_SECTOR_N).
+  // Otherwise a user can pick e.g. "manufacturing" (n=1) and find the heatmap
+  // silently has no row for it. Sankey + incident list still see all sectors.
+  const sectorCounts = {};
+  for (const r of state.all) {
+    const s = r.deployment_context?.sector;
+    if (s) sectorCounts[s] = (sectorCounts[s] || 0) + 1;
+  }
+  const sectors = Object.keys(sectorCounts)
+    .filter((s) => sectorCounts[s] >= MIN_SECTOR_N)
+    .sort();
   for (const s of sectors) {
     sectorSel.appendChild(opt(s, s.replace(/_/g, " ")));
   }
@@ -116,18 +126,22 @@ function opt(value, label) {
   return o;
 }
 
-function applyFilter(rows) {
+// excludeKeys = filter dimensions to skip. Used by the heatmap so it does NOT
+// collapse to a single row when the user filters by sector or failure_mode
+// (those are the heatmap's own two axes).
+function applyFilter(rows, excludeKeys = []) {
   const f = state.filter;
+  const skip = new Set(excludeKeys);
   return rows.filter((r) => {
-    if (f.sector !== "all" && r.deployment_context?.sector !== f.sector) return false;
-    if (f.country !== "all" && r.country !== f.country) return false;
-    if (f.failure_mode !== "all" && r.failure_mode !== f.failure_mode) return false;
-    if (f.harm !== "all" && r.harm !== f.harm) return false;
-    if (f.year != null) {
+    if (!skip.has("sector") && f.sector !== "all" && r.deployment_context?.sector !== f.sector) return false;
+    if (!skip.has("country") && f.country !== "all" && r.country !== f.country) return false;
+    if (!skip.has("failure_mode") && f.failure_mode !== "all" && r.failure_mode !== f.failure_mode) return false;
+    if (!skip.has("harm") && f.harm !== "all" && r.harm !== f.harm) return false;
+    if (!skip.has("year") && f.year != null) {
       const y = (r.date || "").slice(0, 4);
       if (Number(y) !== f.year) return false;
     }
-    if (f.search) {
+    if (!skip.has("search") && f.search) {
       const hay = (r.title + " " + (r.rationale || "")).toLowerCase();
       if (!hay.includes(f.search)) return false;
     }
@@ -175,10 +189,13 @@ function refresh() {
     renderSankey(sankeyEl, filtered, HARM_COLORS);
   }
 
-  // Heatmap (always on full dataset; cell selection mirrors current filter)
+  // Heatmap respects every filter EXCEPT its own two axes (sector + failure_mode).
+  // If those weren't excluded, filtering by sector=healthcare would collapse the
+  // heatmap to a single row, which is useless.
+  const heatmapCohort = applyFilter(state.all, ["sector", "failure_mode"]);
   renderHeatmap(
     document.getElementById("heatmap"),
-    state.all,
+    heatmapCohort,
     {
       sector: state.filter.sector === "all" ? null : state.filter.sector,
       failure_mode: state.filter.failure_mode === "all" ? null : state.filter.failure_mode,
