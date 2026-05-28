@@ -1,6 +1,19 @@
 # AI Incident Atlas. Methodology and Findings
 
-DV-377 Final Project · Ankush Rai
+CSEN 377 (Data Visualization) Final Project · Ankush Rai · Spring 2026
+
+## Introduction
+
+The AI Incident Atlas is an interactive visual analytics system that re-frames the public AI Incident Database (AIID) as a set of **escalation pathways** rather than a flat taxonomy. Each of 480 sampled real-world AI incidents is modeled as a four-stage chain — warning signal, failure mode, deployment context, harm — extracted from incident reports by a large language model. A single-page D3.js dashboard lets researchers, regulators, and practitioners explore how AI failures actually unfold across five industry sectors (transportation, media/content, public safety, healthcare, finance) and surfaces, per incident, the stage at which intervention was retrospectively possible but missed. The system is intelligent (LLM-extracted structured pathway data) and interactive (six composable filters, two linked visualizations, a click-to-reveal detail panel, a time-series mini-chart with click-to-filter, and a sector comparison overlay).
+
+## Motivation
+
+Two trends make this project timely. First, the rate of documented AI incidents in AIID has roughly tripled between 2022 and 2026, from ~85 to ~280 per year as generative AI and large-scale automated decision systems have moved into hiring, healthcare claims, criminal justice, and consumer finance. Second, the existing analyses of AIID emphasize *what* failed (taxonomy: bias, hallucination, misuse) rather than *how* the failures escalated from initial warning signals into real-world harm. Two concrete cases motivate the pathway framing:
+
+- **Cigna's PXDX algorithm** (incident #591 in AIID): an automated claim-denial system rejected more than 300,000 health-insurance claims without human review. The escalation chain has a documented warning at stage one (internal employees and doctors had complained about denials beforehand), a `spec_gap` at stage two (the algorithm was used outside its intended scope), a high-stakes-decision context at stage three, and economic harm to vulnerable patients at stage four. A flat taxonomy view labels this "automated decision-making issue." The pathway view shows a missed intervention point.
+- **Uber's 2018 autonomous-vehicle fatality** (incident #4): documented sensor disengagements and contested safety-driver protocols (warning), object-classifier misperceiving a pedestrian (model error), night-driving public road (safety-critical context), and physical harm. Again, the pathway makes the escalation visible.
+
+The project's claim is that *how* incidents escalate, not just *what* failed, is what informs prevention. By extracting and visualizing the chain, we let users see recurring escalation patterns across sectors — for example, that transportation incidents are dominated by model error → physical harm chains while finance is dominated by misuse → economic harm chains. The sustainability angle is "institutional memory of missed interventions": preserving not just the catalog of harms but the stages where intervention was possible and often missed, so future deployments can be reviewed against the historical pattern.
 
 ## Research question
 
@@ -18,13 +31,17 @@ with an optional fifth annotation, `missed_intervention_stage`, which is **delib
 
 Vocabularies were piloted on 20 incidents, then frozen. `situational_factor` and `failure_mode` use closed vocabularies (5–6 values each) to keep the Sankey readable.
 
-## Data
+## Methodology
+
+The methodology has three steps: (1) acquire and stratify-sample the AIID dataset, (2) extract structured pathway data per incident using a large language model, and (3) blind-validate a sample of extractions against hand-coded ground truth. Each step is detailed below.
+
+### Data
 
 - **Source.** AIID weekly snapshot dated 2026-05-25 (1,491 incidents, 7,129 supporting reports). The dump contained full report narrative text in `reports.csv`, so no scraping was needed.
 - **Sample.** Stratified sample of **480 incidents across 5 sectors** (target 100/sector; healthcare capped at 83 and transportation at 97 due to AIID coverage). Sectors: transportation, media/content, public safety, healthcare, finance. The original plan included a hiring/HR sector; pilot inspection showed only 24 incidents matched keyword heuristics, far below the per-sector quota, so we dropped it in favor of an honest five-sector lineup. Sample size was expanded from an initial 200 to 480 after the pilot, to give heatmap-filtered Sankey views enough incidents per (sector × failure-mode) cell to be meaningful.
 - **Sector assignment for sampling** used keyword heuristics on titles + short descriptions, with a priority order (most specific sector first). The LLM extraction pass later re-confirms `deployment_context.sector` independently; mismatches surface as visible noise in the Sankey, not silent corruption.
 
-## Extraction
+### Extraction
 
 Each sampled incident was passed through Claude Sonnet 4.6 with a single-shot prompt that emits one JSON object matching the schema above. The full prompt is in `scripts/extract.py`. Salient prompt design decisions:
 
@@ -34,7 +51,7 @@ Each sampled incident was passed through Claude Sonnet 4.6 with a single-shot pr
 
 200/200 calls succeeded with no schema-violation retries.
 
-## Blind self-validation
+### Blind self-validation
 
 Honest framing: this is **blind self-validation**, not inter-rater agreement. True inter-rater would require a second coder; we have one. Blind coding strictly improves over non-blind (it removes the rubber-stamp failure mode) but does not produce a Cohen's kappa.
 
@@ -50,7 +67,7 @@ Procedure: `scripts/validate.py --pick` selects 30 random incidents and emits a 
 
 We expect the subjective stages (`situational_factor`, `missed_intervention_stage`) to score lower than the more objective ones (`failure_mode`, `harm`). Reporting them separately is the honest move. a blended number would hide the gap.
 
-## Findings (from the 200-incident sample)
+## Findings (from the 480-incident sample)
 
 **Quantitative anchors (480-incident sample):**
 

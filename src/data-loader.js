@@ -1,8 +1,8 @@
 // Loads pathways.json and orchestrates linked viz + filtering.
-import { renderSankey } from "./sankey.js?v=10";
-import { renderHeatmap } from "./heatmap.js?v=10";
-import { renderDetail } from "./detail-panel.js?v=10";
-import { renderTimeline } from "./timeline.js?v=10";
+import { renderSankey } from "./sankey.js?v=11";
+import { renderHeatmap } from "./heatmap.js?v=11";
+import { renderDetail } from "./detail-panel.js?v=11";
+import { renderTimeline } from "./timeline.js?v=11";
 
 const HARM_COLORS = {
   physical: "var(--harm-physical)",
@@ -28,6 +28,9 @@ const state = {
     year: null,
     search: "",
   },
+  // compareSector is independent of state.filter so it does NOT influence the
+  // main cohort. It only feeds the timeline's secondary overlay for "compare trends".
+  compareSector: "none",
   selectedIncidentId: null,
 };
 
@@ -47,6 +50,7 @@ async function init() {
 
 function setupControls() {
   const sectorSel = document.getElementById("sector-filter");
+  const compareSel = document.getElementById("compare-filter");
   const countrySel = document.getElementById("country-filter");
   const failureSel = document.getElementById("failure-filter");
   const harmSel = document.getElementById("harm-filter");
@@ -66,6 +70,7 @@ function setupControls() {
     .sort();
   for (const s of sectors) {
     sectorSel.appendChild(opt(s, s.replace(/_/g, " ")));
+    compareSel.appendChild(opt(s, s.replace(/_/g, " ")));
   }
 
   const countries = Array.from(
@@ -83,6 +88,10 @@ function setupControls() {
 
   sectorSel.addEventListener("change", () => {
     state.filter.sector = sectorSel.value;
+    refresh();
+  });
+  compareSel.addEventListener("change", () => {
+    state.compareSector = compareSel.value;
     refresh();
   });
   countrySel.addEventListener("change", () => {
@@ -115,6 +124,8 @@ function setupControls() {
     failureSel.value = "all";
     harmSel.value = "all";
     search.value = "";
+    state.compareSector = "none";
+    compareSel.value = "none";
     refresh();
   });
 }
@@ -158,12 +169,26 @@ function refresh() {
   if (state.filter.harm !== "all") activeBits.push(state.filter.harm);
   if (state.filter.year != null) activeBits.push(String(state.filter.year));
   if (state.filter.search) activeBits.push(`"${state.filter.search}"`);
+  if (state.compareSector !== "none") activeBits.push(`vs ${state.compareSector.replace(/_/g, " ")}`);
   const statusEl = document.getElementById("status");
   statusEl.textContent =
     `${filtered.length} of ${state.all.length} incidents` +
     (activeBits.length ? ` · filters: ${activeBits.join(" · ")}` : "");
 
-  // Timeline
+  // Timeline. When compareSector is set, build a second cohort that swaps in
+  // the compare sector. The compare cohort still respects every OTHER active
+  // filter (year, country, search, harm, failure_mode), so the comparison is
+  // apples-to-apples within whatever slice the user is looking at.
+  let compareRows = null;
+  let compareLabel = null;
+  if (state.compareSector !== "none") {
+    const savedSector = state.filter.sector;
+    state.filter.sector = state.compareSector;
+    compareRows = applyFilter(state.all);
+    state.filter.sector = savedSector;
+    compareLabel = state.compareSector.replace(/_/g, " ");
+  }
+
   renderTimeline(
     document.getElementById("timeline"),
     state.all,
@@ -172,7 +197,9 @@ function refresh() {
     (year) => {
       state.filter.year = year;
       refresh();
-    }
+    },
+    compareRows,
+    compareLabel
   );
 
   // Sankey

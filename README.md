@@ -73,3 +73,14 @@ Each incident → JSON:
 - **Blind self-validation ≠ inter-rater.** The same author wrote the schema and hand-codes the validation sample. We mitigate the rubber-stamp risk by hand-coding *before* looking at LLM output, but a true inter-rater study would require a second coder.
 - **AIID reporting bias.** Skews toward English-language, US/EU, consumer-facing incidents.
 - **Sector heuristic.** Initial sampling uses keyword matching on titles + short descriptions. The LLM extraction re-confirms sector independently per incident; mismatches between heuristic and LLM are visible in the sample.
+
+## Submission checklist (owner-only tasks before turn-in)
+
+Code, data, and writeup content are complete. These remaining items can only be done by the owner:
+
+- [ ] **Enable GitHub Pages.** Repo Settings → Pages → Source: Deploy from a branch → Branch: `main`, Folder: `/ (root)` → Save. Site will be live at `https://akrai37.github.io/ai_incident_atlas/` after ~1–2 min.
+- [ ] **Hand-code 30 incidents for blind validation.** Template at `data/extracted/handcoded_template.json`. Fill in the `your_codes` blocks WITHOUT looking at `pathways.json`, save as `data/extracted/handcoded.json`. Then `python3 scripts/validate.py --report` prints per-stage accuracy that drops into `writeup.md`.
+- [ ] **Convert `writeup.md` to ACM/IEEE double-column format.** Easiest path: paste sections into an Overleaf `acmart` (`sigconf` option) template. Content is rubric-complete; this is a pure formatting pass.
+- [ ] **Prepare 10-minute in-class presentation slides.** The "Try this" example in the dashboard intro (filter transportation → physical+model_error; filter finance → economic+misuse) is a clean demonstration arc.
+- [ ] **Record 6–10 minute walkthrough video.** Screen-record while exercising each interactive feature; narrate the pathway framing and one real incident's chain.
+- [ ] **Zip the repo for submission.** `git archive --format=zip --prefix=ai_incident_atlas/ -o ai_incident_atlas.zip HEAD` produces a clean archive from the current `main`.
