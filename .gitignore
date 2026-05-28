@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+.claude/
+data/raw/aiid_snapshot.tar.bz2
+data/raw/mongodump_full_snapshot/
+data/extracted/handcoded.json

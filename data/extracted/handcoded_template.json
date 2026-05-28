@@ -1,0 +1,482 @@
+[
+  {
+    "incident_id": 1452,
+    "title": "Purported AI-Generated Impersonations of Albanian Cardiologist Spiro Qirko and Journalist Ilir Topi Were Reportedly Used on Facebook to Promote Hypertension Product in Kosovo",
+    "short_description": "An allegedly AI-generated video circulating on Facebook appeared to impersonate Albanian cardiologist Spiro Qirko and journalist Ilir Topi in order to market \"Hyper Caps\" as a treatment for hypertension in Kosovo. Reporting indicated that both men denied involvement. An AI-detection tool reportedly assessed the media as likely AI-generated, and the product was reportedly not listed as holding marketing authorization in Kosovo.",
+    "primary_report_text_excerpt": "Keqp\u00ebrdorimi i emrit t\u00eb kardiologut shqip\u00ebtar dhe gazetarit nga Shqip\u00ebria p\u00ebr t\u00eb shitur ila\u00e7e p\u00ebr hipertension\n==============================================================================================================\n\n#### Deklarata\n\nSi specialist, njer\u00ebzit shpesh m\u00eb pyesin: \u201eA \u00ebsht\u00eb e mundur t\u00eb sh\u00ebrohet plot\u00ebsisht hipertensioni?\n\nfaqet n\u00eb Facebook\n\n#### Vler\u00ebsimi\n\n![](https://kallxo.com/wp-content/themes/kallxo_wp_2019/dist/images/kater-krypore.svg)\n\n##### Rren\u00eb\n\n\u00cbsht\u00eb e manipuluar p\u00ebrmes Inteligjenc\u00ebs Artificiale nj\u00eb video, n\u00eb t\u00eb cil\u00ebn pretendohet rrejsh\u00ebm se kardiologu Spiro Qirko, n\u00eb nj\u00eb intervist\u00eb me gazetarin Ilir Topi, zbulon ila\u00e7in 'Hyper Caps' q\u00eb sh\u00ebron plot\u00ebsisht hipertensionin. Analiza p\u00ebrmes platform\u00ebs HIVE Moderation konfirmon me 96.4% sakt\u00ebsi se videoja dhe z\u00ebri jan\u00eb gjeneruar me Inteligjenc\u00eb Artificiale (Deepfake). Vet doktor Qirko dhe gazetari Topi kan\u00eb mohuar \u00e7do p\u00ebrfshirje, duke e cil\u00ebsuar rastin si mashtrim t\u00eb r\u00ebnd\u00eb dhe video t\u00eb manipuluar. Ila\u00e7i 'Hyper Caps' nuk ka Autorizim Marketingu nga Agjencia Kosovare p\u00ebr Produkte dhe Pajisje Medicinale (AKPPM), \u00e7ka e b\u00ebn tregtimin e tij t\u00eb jasht\u00ebligjsh\u00ebm n\u00eb Kosov\u00eb.\n\n#### Artikulli\n\nFaqja n\u00eb Facebook[\u00a0Dr. Spiro Qirko](https://fit.my-health.blog/M24T3jcX?media_type=video&campaign_id=120245649803330357&adset_id=120245649803350357&ad_id=120245649803340357&placement=Facebook_Mobile_Feed&a=fy-BRI-bloomfield-B&x=961459690129113&cn=al2294truba&cel1=2294&fbclid=IwdGRzaAQrbrBleHRuA2FlbQEwAGFkaWQBqzLIRp2UVXNydGMGYXBwX2lkD",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 76,
+    "title": "Live facial recognition is tracking kids suspected of being criminals",
+    "short_description": "Buenos Aires city government uses a facial recognition system that has led to numerous false arrests.",
+    "primary_report_text_excerpt": "In a national database in Argentina, tens of thousands of entries detail the names, birthdays, and national IDs of people suspected of crimes. The database, known as the Consulta Nacional de Rebeld\u00edas y Capturas (National Register of Fugitives and Arrests), or CONARC, began in 2009 as a part of an effort to improve law enforcement for serious crimes.\n\nBut there are several things off about CONARC. For one, it\u2019s a plain-text spreadsheet file without password protection, which can be readily found via Google Search and downloaded by anyone. For another, many of the alleged crimes, like petty theft, are not that serious\u2014while others aren\u2019t specified at all.\n\nMost alarming, however, is the age of the youngest alleged offender, identified only as M.G., who is cited for \u201ccrimes against persons (malicious)\u2014serious injuries.\u201d M.G. was apparently born on October 17, 2016, which means he\u2019s a week shy of four years old.\n\nNow a new investigation from Human Rights Watch has found that not only are children regularly added to CONARC, but the database also powers a live facial recognition system in Buenos Aires deployed by the city government. This makes the system likely the first known instance of its kind being used to hunt down kids suspected of criminal activity.\n\n\u201cIt\u2019s completely outrageous,\u201d says Hye Jung Han, a children\u2019s rights advocate at Human Rights Watch, who led the research.\n\nBuenos Aires first began trialing live facial recognition on April 24, 2019. Implemented without any ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 615,
+    "title": "Colorado Lawyer Filed a Motion Citing Hallucinated ChatGPT Cases",
+    "short_description": "A Colorado Springs attorney, Zachariah Crabill, mistakenly used hallucinated ChatGPT-generated legal cases in court documents. The AI software provided false case citations, leading to the denial of a motion and legal repercussions for Crabill, highlighting risks in using AI for legal research.",
+    "primary_report_text_excerpt": "COLORADO SPRINGS, Colo. (KRDO) - Colorado Springs attorney Zachariah Crabill thought he was filing a motion with cited cases that would favor his client\u2019s argument, only to find out many of the cases were made up by Artificial Intelligence software ChatGPT.\n\nCrabill, a licensed Colorado attorney for about a year and a half, was working on his first civil litigation case. He was defending a client that was accused of breaching a car payment agreement.\n\nIn a court document, admitting his mistake, Crabill said it was the first motion to set aside a summary judgment he had ever researched, drafted, and filed by himself. He had heard of ChatGPT, an artificial intelligence chatbot developed by OpenAI, trained to follow instructions in a prompt and provide a detailed response. So he turned to AI technology to help find case laws that would strengthen his client\u2019s argument.\n\n\u201cI felt my lack of experience in legal research and writing, and consequently, my efficiency in this regard could be exponentially augmented to the benefit of my clients by expediting the time-intensive research portion of drafting,\u201d Crabill said in a court document.\n\nRamsey Lama, a former Fremont County judge turned defense attorney, said law research can be very time-intensive, taking 20 to 30 hours for some cases. While he has never used ChatGPT, he said he can see how it would be useful in the legal industry.\n\n\u201cWhat previously took a lawyer maybe 40 hours or 20 hours to do, maybe a tool like this could conden",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1169,
+    "title": "Reported AI-Assisted Influence Campaigns by GoLaxy Allegedly Targeting Hong Kong and Taiwan Political Discourse",
+    "short_description": "Reportedly leaked documents reviewed by researchers and media allege that Chinese firm GoLaxy used its \"GoPro\" AI system in multiple influence campaigns. In 2020, it reportedly tracked 180,000 Twitter accounts to counter opposition to Hong Kong's National Security Law; in 2022\u20132023, it amplified praise for China's Zero Covid policy using purportedly fake Facebook accounts; and in late 2023, allegedly it advised on messaging to weaken Taiwan's Democratic Progressive Party.",
+    "primary_report_text_excerpt": "The Chinese government is using companies with expertise in artificial intelligence to monitor and manipulate public opinion, giving it a new weapon in information warfare, according to current and former U.S. officials and documents unearthed by researchers.\n\nOne company's internal documents show how it has undertaken influence campaigns in Hong Kong and Taiwan, and collected data on members of Congress and other influential Americans.\n\nWhile the firm has not mounted a campaign in the United States, American spy agencies have monitored its activity for signs that it might try to influence American elections or political debates, former U.S. officials said.\n\nArtificial intelligence is increasingly the new frontier of espionage and malign influence operations, allowing intelligence services to conduct campaigns far faster, more efficiently and on a larger scale than ever before.\n\nThe Chinese government has long struggled to mount information operations targeting other countries, lacking the aggressiveness or effectiveness of Russian intelligence agencies. But U.S. officials and experts say that advances in A.I. could help China overcome its weaknesses.\n\nA new technology can track public debates of interest to the Chinese government, offering the ability to monitor individuals and their arguments as well as broader public sentiment. The technology also has the promise of mass-producing propaganda that can counter shifts in public opinion at home and overseas.\n\nChina's emerging ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1228,
+    "title": "Alleged ChatGPT Misuse by Contractor Leads to Reported Data Exposure in New South Wales Resilient Homes Program",
+    "short_description": "A former contractor of the New South Wales Reconstruction Authority reportedly uploaded a spreadsheet containing personal and health information of Resilient Homes Program applicants to ChatGPT during a three-day period in March 2025. Up to 3,000 people may have reportedly been affected.",
+    "primary_report_text_excerpt": "The NSW Reconstruction Authority (RA) is aware of a data breach involving personal information belonging to some people who applied for the Northern Rivers Resilient Homes Program (RHP).\n\nThe breach occurred when a former contractor of the RA uploaded data containing personal information to an unsecured AI tool which was not authorised by the department.\n\nThere is no evidence that any information has been made public, however, Cyber Security NSW will continue to monitor the internet and the dark web to see if any of the information is accessible online.\n\nWe understand this news is concerning and we are deeply sorry for the distress it may cause for those who have engaged with the program.\n\nWe will be contacting people this week with updates to let them know what has happened and whether they have been impacted or not.\n\nSince learning about the extent of this breach, we have engaged forensic analysts and are working closely with Cyber Security NSW to undertake an investigation to understand the scope and the risks arising from it.\n\nWe expect the forensic analysis to be completed within the coming days. This will give us a clearer understanding of the extent of the breach and the specific data involved.\n\nWe know people will want to know exactly what has been shared and we are doing all we can to get that information to them as soon as possible.\n\nSo far, there is no evidence that any of the uploaded data has been accessed by a third party.\n\n**What happened?**\n\nBetween 12 and 15 ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 79,
+    "title": "Kidney Testing Method Allegedly Underestimated Risk of Black Patients",
+    "short_description": "Decades-long use of the estimated glomerular filtration rate (eGFR) method to test kidney function which considers race has been criticized by physicians and medical students for its racist history and inaccuracy against Black patients.",
+    "primary_report_text_excerpt": "BLACK PEOPLE IN the US suffer more from chronic diseases and receive inferior health care relative to white people. Racially skewed math can make the problem worse.\r\n\n\r\n\nDoctors often make life-changing decisions about patient care based on algorithms that interpret test results or weight risks, like whether to perform a particular procedure. Some of those formulas factor in a person\u2019s race, meaning patients\u2019 skin color can affect access to care.\r\n\n\r\n\nA new study of patients in the Boston area is one of the first to document the harm that can cause. It examined the effect on care of a widely used but controversial formula for estimating kidney function that by design assigns Black people healthier scores.\r\n\n\r\n\nThe study analyzed health records for 57,000 people with chronic kidney disease from the Mass General Brigham health system that includes Harvard teaching hospitals Massachusetts General and Brigham and Women's. One third of Black patients, more than 700 people, would have been placed into a more severe category of kidney disease if their kidney function had been estimated using the same formula as for white patients.\r\n\n\r\n\nThat could have affected decisions such as when to refer someone to a kidney specialist, or refer them for a kidney transplant. In 64 cases, patients\u2019 recalculated scores would have qualified them for a kidney transplant wait list. None had been referred or evaluated for transplant, suggesting that doctors did not question the race-based recommendatio",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1324,
+    "title": "Pieces Technologies' Clinical AI Systems Allegedly Marketed With Misleading Performance Claims",
+    "short_description": "The Texas Attorney General announced a settlement with Pieces Technologies following allegations that the company misrepresented the accuracy of its healthcare AI systems used for clinical documentation. The state concluded that marketing claims about low error and hallucination rates may have misled hospitals and clinicians relying on the tools in patient care settings. The settlement imposed restrictions on future claims and required greater transparency around performance and risk.",
+    "primary_report_text_excerpt": "On September 18, the Texas Attorney General (AG) announced a settlement agreement with Pieces Technologies, Inc. (\"Pieces\"), a Dallas-based healthcare artificial intelligence (AI) research and development firm, resolving allegations that the company made false, misleading or deceptive claims about the accuracy of its healthcare AI products. According to the Texas AG's Office, the company inaccurately advertised its AI products and potentially harmed patients as a result. The Texas AG Office's settlement agreement with Pieces includes requirements related to disclosures in connection with marketing and advertising its products or services, prohibitions against misrepresentations (including independence of an endorser or reviewers of a business product or service) and documentation obligations concerning potentially harmful uses of its products or services.\n\nThis settlement is notable for a few reasons. First, it reinforces the Texas AG Office's position as a regulator that AI companies should pay attention to when it comes to data-related issues. This is the latest in a series of privacy-related actions by that office, and it seems likely that Texas will become even more active in the future. Second, it adds state AGs to the list of regulators that AI companies must consider as they develop and deploy their products (in addition to the Federal Trade Commission (FTC), which has been\u00a0[quite active on these issues](https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-a",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 446,
+    "title": "ShotSpotter Failed to Alert Authorities of Mass Shooting in North Carolina",
+    "short_description": "ShotSpotter did not detect gunshots and alert Durham police of a drive-by shooting in Durham, North Carolina which left five people in hospital on New Year's Day.",
+    "primary_report_text_excerpt": "The newly installed ShotSpotter system did not alert on a drive-by shooting that put five people in the hospital on New Year's Day, revealing limitations of the gunfire detection software being piloted in the Bull City.\n\n\"We did not receive a ShotSpotter alert for this shooting incident. DPD has been in contact with ShotSpotter representatives and their engineers are going to look into the incident,\" a police spokesperson emailed Wednesday.\n\nIn its contract with the city, ShotSpotter committed to detecting and locating 90% of gunfire when the weapon is above .25 caliber, The N&O previously reported.\n\nThat commitment excludes holidays when fireworks are widely used \u2014 specifically the 48 hours surrounding New Year's Eve and July 4. \"Our hearts go out to the community impacted by the recent mass shooting that took place over the weekend in Durham, NC.\n\nWe are investigating the incident and intend on providing a full report to Durham Police Department,\" a ShotSpotter spokesperson said in an email.\n\nA shooting is considered detectable only if it occurs \"fully outdoors in free space\" and no silencer is used, according to the contract.\n\nMayor Pro Tem Mark-Anthony Middleton said this was a \"textbook\" case of the limitations of ShotSpotter and \"not surprising nor alarming.\"\n\n\"ShotSpotter has ALWAYS been clear about the circumstances under which the technology is limited. Gunfire from enclosed spaces such as buildings and vehicles does not cross the acoustical threshold to trigger the ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 855,
+    "title": "Names Linked to Defamation Lawsuits Reportedly Spur Filtering Errors in ChatGPT's Name Recognition",
+    "short_description": "ChatGPT has reportedly been experiencing errors and service disruptions caused by hard-coded filters designed to prevent it from producing potentially harmful or defamatory content about certain individuals by blocking prompts containing specific names, likely related to post-training interventions. The reported names are Brian Hood, Jonathan Turley, Jonathan Zittrain, David Faber, David Mayer, and Guido Scorza. ",
+    "primary_report_text_excerpt": "Across the final years of his life, David Mayer, a theater professor living in Manchester, England, faced the cascading consequences of an unfortunate coincidence: A dead Chechen rebel on a terror watch list had once used Mr. Mayer's name as an alias.\n\nThe real Mr. Mayer had travel plans thwarted, financial transactions frozen and crucial academic correspondence blocked, his family said. The frustrations plagued him until his death in 2023, at age 94.\n\nBut this month, his fight for his identity edged back into the spotlight when\u00a0[eagle-eyed users noticed](https://www.reddit.com/r/mildyinteresting/comments/1h51kgr/chatgpt_would_refuse_to_say_the_name_david_mayer/)\u00a0one particular name was sending OpenAI's ChatGPT bot into shutdown.\n\n*David Mayer*.\n\nUsers' efforts to prompt the bot to say \"David Mayer\" in a variety of ways were instead resulting in error messages, or the bot would simply refuse to respond. It's unclear why the name was kryptonite for the bot service, and OpenAI would not say whether the professor's plight was related to ChatGPT's issue with the name.\n\nBut the saga underscores some of the prickliest questions about generative A.I. and the chatbots it powers: Why did that name knock the chatbot out? Who, or what, is making those decisions? And who is responsible for the mistakes?\n\n\"This was something that he would've almost enjoyed, because it would have vindicated the effort he put in to trying to deal with it,\" Mr. Mayer's daughter, Catherine, said of the debacl",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 518,
+    "title": "New York Detective Misused Woody Harrelson's Face to Perform Face Recognition Search",
+    "short_description": "When the facial recognition search for a CVS theft suspect's face returned no useful matches due to the surveillance footage being obscured and highly pixelated, a New York City police detective continued the face search using Woody Harrelson's face allegedly due to his resemblance to the suspect's face, eventually leading to the arrest of an unknown victim.",
+    "primary_report_text_excerpt": "Introduction\n------------\n\nOn April 28, 2017, a suspect was caught on camera reportedly stealing beer from a CVS in New York City. The store surveillance camera that recorded the incident captured the suspect\u2019s face, but it was partially obscured and highly pixelated. When the investigating detectives submitted the photo to the New York Police Department's (NYPD) facial recognition system, it returned no useful matches.\n\nRather than concluding that the suspect could not be identified using face recognition, however, the detectives\u00a0got creative.\n\nOne detective from the Facial Identification Section (FIS), responsible for conducting face recognition searches for the NYPD, noted that the suspect looked like the actor Woody Harrelson, known for his performances in _Cheers_, _Natural Born Killers_, _True Detective_, and other television shows and movies. A Google image search for the actor predictably returned high-quality images, which detectives then submitted to the face recognition algorithm in place of the suspect's photo. In the resulting list of possible candidates, the detectives identified someone they believed was a match\u2014not to Harrelson\u00a0but to the suspect whose photo had produced no possible hits.\n\nThis celebrity \u201cmatch\u201d was sent back to the investigating officers, and someone who was not\u00a0Woody Harrelson was eventually arrested for petit larceny.\n\nThere are no rules when it comes to what images police can submit to face recognition algorithms to generate investigative ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 697,
+    "title": "Purported Deepfake Image Allegedly Circulating of Donald Trump with Underage Girl at Jeffrey Epstein's Private Island",
+    "short_description": "A purported deepfake image allegedly depicting Donald Trump with an underage girl at Jeffrey Epstein's private island in 1992 has reportedly been circulating on social media. ",
+    "primary_report_text_excerpt": "CLAIM: An image shows former President Donald Trump dancing with a teenage girl at a party at Jeffrey Epstein's private island.\n\nAP'S ASSESSMENT: False. Trump's campaign and an expert on synthetic images say the image isn't real. The visual has the telltale signs of one made using programs powered by generative artificial intelligence.\n\nTHE FACTS: Social media users are claiming they've found new evidence of misconduct by the former Republican president.\n\nMany are sharing an image that appears to show Trump dancing with a young girl at a party years earlier. Wearing a dark suit and tie, Trump appears to clutch the blonde-haired girl in a red dress as people mill around in the background.\n\n\"Photo of Donald Trump at Epstein's private island dancing with a 13 year old girl,\" the text superimposed over the photo reads, referring to the\u00a0[disgraced financier](https://apnews.com/article/jeffrey-epstein-jail-suicide-prison-death-8d194a756f2b429067f009a0c70f96c0)\u00a0who killed himself in a New York City jail while facing federal sex trafficking and conspiracy charges in 2019.\n\n\"Trump was in his 50s when this was taken,\" the text on some of the images adds. \"What kind of man does that?\"\n\nSome posts even juxtapose the image with actual footage of Trump and Epstein chatting animatedly at a gathering. The text of the clip says it's from November 1992 in Palm Beach, Florida and shows the two \"discussing women.\"\n\nBut while Trump was at one point among the\u00a0[many powerful associates](https://apn",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 638,
+    "title": "Fatal Crash Involving Tesla Full Self-Driving Claims Employee's Life",
+    "short_description": "A Tesla employee, Hans von Ohain, was killed in a crash while allegedly using the Full Self-Driving feature. The car failed to navigate mountain curves, leading to a fatal collision, possibly making von Ohain the first known fatality of the Full Self-Driving feature.",
+    "primary_report_text_excerpt": "EVERGREEN, Colo.\n\nHans von Ohain and Erik Rossiter were on their way to play golf one afternoon in 2022 when von Ohain's Tesla suddenly swerved off Upper Bear Creek Road. The car's driver-assistance software, Full Self-Driving, was struggling to navigate the mountain curves, forcing von Ohain repeatedly to yank it back on course.\n\n\"The first time it happened, I was like, 'Is that normal?'\" recalled Rossiter, who described the five-mile drive on the outskirts of Denver as \"uncomfortable.\" \"And he was like, 'Yeah, that happens every now and then.'\"\n\nHours later, on the way home, the Tesla Model 3 barreled into a tree and exploded in flames, killing von Ohain, a Tesla employee and devoted fan of CEO Elon Musk. Rossiter, who survived the crash, told emergency responders that von Ohain was using an \"auto-drive feature on the Tesla\" that \"just ran straight off the road,\" according to a 911 dispatch recording obtained by The Washington Post. In a recent interview, Rossiter said he believes that von Ohain was using Full Self-Driving, which --- if true --- would make his death the first known fatality involving Tesla's most advanced driver-assistance technology.\n\nTesla owners have long complained of occasionally erratic behavior by the cars' software, including sudden braking, missed road markings and crashes with parked emergency vehicles. Since federal regulators began requiring automakers to report crashes involving driver-assistance systems in 2021, they have logged more than 900 ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1138,
+    "title": "South African Legal Team Reportedly Relied on Unverified ChatGPT Case Law in Johannesburg Body Corporate Defamation Matter",
+    "short_description": "In a defamation case at the Johannesburg Regional Court, Rodrigues Blignaut Attorneys, representing plaintiff Michelle Parker, reportedly relied on purportedly non-existent legal judgments generated by ChatGPT to help argue their case. Magistrate Arvin Chaitram reportedly found the case names and citations were fictitious, causing a two-month delay. The court issued a punitive costs order and rebuked the plaintiff's legal team for uncritically accepting AI-generated research.",
+    "primary_report_text_excerpt": "Lawyers acting for a woman who claimed she was defamed by a body corporate in Parkwood, Johannesburg, were left red-faced when it emerged they tried to use non-existent judgments generated by ChatGPT to bolster her case. \n\n\u201cThe names and citations are fictitious, the facts are fictitious, and the decisions are fictitious,\u201d said a judgment of the Johannesburg regional court, last week. \n\nIt also slapped the woman with a punitive costs order.\n\nMagistrate Arvin Chaitram said the incident was a \u201ctimely reminder\u201d that \u201cwhen it comes to legal research, the efficiency of modern technology still needs to be infused with a dose of good old-fashioned independent reading\u201d. \n\nThe fictitious judgments meant a two-month delay, after Chaitram postponed the case for the lawyers to track down the judgments. The case first came before the magistrate in March, when Claire Avidon, counsel for the trustees of the body corporate, argued that a body corporate cannot be sued for defamation. This would have put an end to the case.\n\nBut Jurie Hayes, counsel for the plaintiff, Michelle Parker, argued that there were earlier judgments that answered this question. It was just that by the time of the hearing, his team had not yet been able to access them.\n\nChaitram said in his judgment he decided at the time to grant a postponement to late May. \u201cAs the question appeared to be a novel one that could be dispositive of the entire action, the court requested that both parties make a concerted effort to source",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 230,
+    "title": "Model 3 Tesla on Autopilot Crashed into a Truck in Florida, Killing Driver",
+    "short_description": "In Florida, a Model 3 Tesla on Autopilot mode crashed into a tractor-trailer truck, killing the 50-year-old driver.",
+    "primary_report_text_excerpt": "Tesla\u2019s advanced driver assist system, Autopilot, was active when a Model 3 driven by a 50-year-old Florida man crashed into the side of a tractor-trailer truck on March 1st, the National Transportation Safety Board (NTSB) states in a report released on Thursday. Investigators reviewed video and preliminary data from the vehicle and found that neither the driver nor Autopilot \u201cexecuted evasive maneuvers\u201d before striking the truck.\n\nThe driver, Jeremy Beren Banner, was killed in the crash. It is at least the fourth fatal crash of a Tesla vehicle involving Autopilot.\n\nThis crash is eerily similar to another one involving a Tesla in 2016 near Gainesville, Florida. In that incident, Joshua Brown was killed when his Model S sedan collided with a semitrailer truck on a Florida highway in May 2016, making him the first known fatality in a semi-autonomous car.\n\nThe National Highway Traffic Safety Administration (NHTSA) determined that a \u201clack of safeguards\u201d contributed to Brown\u2019s death. Meanwhile, today\u2019s report is just preliminary, and the NTSB declined to place blame on anyone.\n\nInvestigators state that Banner engaged Autopilot about 10 seconds before the collision. \u201cFrom less than 8 seconds before the crash to the time of impact, the vehicle did not detect the driver\u2019s hands on the steering wheel,\u201d the NTSB said. The vehicle was traveling at 68 mph when it crashed. The roof of the Model 3 was sheared off as it hit the truck\u2019s trailer, passing underneath, and then coming to a stop ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 355,
+    "title": "Uber Allegedly Wrongfully Accused Drivers of Fraud via Automated Systems",
+    "short_description": "Uber was alleged in a lawsuit to have wrongfully accused its drivers in the UK and Portugal of fraudulent activity through automated systems, which resulted in their dismissal without a right to appeal.",
+    "primary_report_text_excerpt": "**App Drivers & Couriers Union files ground-breaking legal challenge against Uber\u2019s dismissal of drivers by algorithm in the UK and Portugal**\n\n- In landmark legal case, former Uber drivers asks courts in the Netherlands to over-rule the algorithm that fired them\n- Drivers in London, Birmingham and Lisbon wrongly accused of \u2018fraudulent activity\u2019 as detected by Uber systems before being fired without right of appeal\n- Case will test the extent that Article 22 of the EU General Data Protection Regulation (GDPR) can protect individuals from unfair automated decision making\n- Union invites all Uber drivers & couriers who have been similarly deactivated to register with them for potential future action\n- Crowd fund appeal launched to fund this legal action to protect the digital rights of Uber drivers\n\nIn a landmark case, the App Drivers & Couriers Union have today filed a complaint in the Amsterdam district court to challenge Uber\u2019s practice of robo-firing of drivers by algorithm. The union is bringing the case on behalf of three drivers from London and Birmingham in the UK. The International Alliance of App-based Transport workers is supporting the claim of a fourth driver from Lisbon,Portugal. The action is also supported by Worker Info Exchange, a non-profit organisation dedicated to workplace digital rights. \n\nUnder the UK Data Protection Act and Article 22 of the EU General Data Protection Regulation (GDPR), individuals have the right to certain protections from automated de",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1447,
+    "title": "Sixth Circuit Sanctioned Lawyers in Whiting v. City of Athens over Alleged Fake Appellate Citations in Briefs Reportedly Bearing Hallmarks of Hallucinations",
+    "short_description": "The U.S. Court of Appeals for the Sixth Circuit sanctioned attorneys Van Irion and Russ Egli after reportedly finding more than two dozen fake citations and alleged factual misrepresentations in appellate briefs in Whiting v. City of Athens. The court asked whether generative AI had been used, but the attorneys reportedly did not answer that question. Public reporting described the filings as bearing hallmarks of AI hallucinations.",
+    "primary_report_text_excerpt": "March 16 (Reuters) - An appeal containing fake case citations that misrepresent the law can be dismissed as frivolous, a U.S. federal appeals court panel said in a decision sanctioning \u200btwo attorneys who submitted filings that bore hallmarks of artificial intelligence \"hallucinations.\"\n\nThe Cincinnati-based 6th U.S. Circuit Court of Appeals \u200csaid in\u00a0[its order, opens new tab](https://fingfx.thomsonreuters.com/gfx/legaldocs/zjvqmegykvx/6th%20Circuit%20sanctions%20order.pdf)\u00a0on Friday that attorneys Van Irion and Russ Egli \"sullied the reputation of our bar, which now must litigate under the cloud of their conduct.\"\n\nThe court said it found more than two dozen fake citations and misrepresentations of fact in the appeal, which involved an incident at a fireworks \u200bshow hosted by the city of Athens, Tennessee.\n\nThe appeals court in a prior order in the case asked the attorneys \u200bhow they vetted their briefs for accuracy and whether they used generative AI to write the filings. \u2060The attorneys did not answer the court's questions about AI, and instead challenged the lawfulness of the order.\n\nThe two attorneys must reimburse \u200bAthens for its legal work on the appeal, and also must individually pay $15,000 each to the appeals court as a punitive sanction, \u200baccording to the order.\n\nEgli and Irion in a statement on Tuesday said they \"categorically\" deny the court's allegations of citing fake cases, and also contend they were denied a meaningful chance to respond to the panel's questions.\n",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1276,
+    "title": "Ottawa Couple Reportedly Loses CA$177,023 After Purported Deepfake Elon Musk Investment Scam",
+    "short_description": "A retired Ottawa couple, Doug and Victoria Lloyd, lost CA$177,023 after being lured by a purported deepfake video of Elon Musk promoting a fake investment platform. The deepfake allegedly led to prolonged social engineering, remote access to their computer, and fraudulent cryptocurrency transfers. The couple reportedly suffered major financial loss and ongoing debt. Police say recovery is unlikely.",
+    "primary_report_text_excerpt": "Doug and Victoria Lloyd are left searching for answers after the retired married couple was taken for $177,023 through a line of credit.\n\nIt all started with an online video of what appeared to be Elon Musk promoting a new investment opportunity.\n\n-   Sign up now for daily CTV News Ottawa newsletters\n-   The information you need to know, sent directly to you: Download the CTV News App\n\nThe Lloyds followed a link in the video description and submitted their phone number to a website that promised significant financial returns.\n\n\"In the beginning it was exhilarating. Thinking, wow, there's this new thing you can invest in and you'd make money and we were able to maybe get our dream house,\" said Victoria Lloyd.\n\n\"We needed the money at the time. We needed to build up as many funds as we could.\"\n\nHowever, the video was fake, made with deepfake technology. It was the beginning of a scam that would drastically change the Lloyds' lives forever.\n\nIt all started at the beginning of October, when they received a call from a man claiming to work for an investment platform called 'Be the Bank'.\n\nThe man put them in touch with a 'financial advisor' who convinced the Lloyds to send him a small sum in order to begin forex trading on their behalf.\n\n\"We talked for hours every day for months. He always encouraged me and told me what to do,\" said Doug Lloyd.\n\n\"He built it up like he was my best friend. He'd talk to us about his wife and his dog sometimes.\"\n\nAfter a while, the scammer convinced ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1027,
+    "title": "Norwegian Supreme Court Receives Legal Filing with Fabricated Citations Allegedly Generated by AI Tool",
+    "short_description": "In early 2025, Norway\u2019s Supreme Court (H\u00f8yesterett) received a legal filing containing hallucinated legal citations and quotes, allegedly inserted by an attorney using an AI tool without verification. The fabricated sources were detected during standard review. While no sanctions were issued, the Court updated its guidance to lawyers, warning that AI use does not exempt them from professional responsibility.",
+    "primary_report_text_excerpt": "H\u00f8yesterett har i l\u00f8pet av \u00e5rets f\u00f8rste kvartal mottatt et prosesskriv med s\u00e5kalte hallusinasjoner, alts\u00e5 oppdiktet informasjon. Dette forteller h\u00f8yesterettsjustitiarius Toril Marie \u00d8ie til Advokatbladet.\n\nProsesskrivet, som ble inngitt i forbindelse med anke over et prosessuelt sp\u00f8rsm\u00e5l i en sivil sak, inneholdt b\u00e5de lover og forarbeider som rett og slett ikke eksisterer, forteller \u00d8ie.\n\nAt disse var oppdiktede kilder, ble\u00a0oppdaget internt da anken ble gjennomg\u00e5tt i H\u00f8yesterett.\n\nUtrederne som forbereder sakene som skal til behandling i H\u00f8yesterett gjennomg\u00e5r rutinemessig de sentrale rettskildene det blir vist til i prosesskriv fra partene.\u00a0\n\n-- I prosesskrivet var det b\u00e5de henvist til ulike rettskilder og gjengitt sitater fra kildene. Da utrederen hos oss skulle fors\u00f8ke \u00e5 finne frem til disse kildene, viste det seg at kildene ikke eksisterte. Her hadde advokaten rett og slett ikke sjekket kildene fra KI f\u00f8r prosesskrivet ble inngitt, sier \u00d8ie.\n\n### -- Overrasket\n\nDet er ikke f\u00f8rste gang kunstig intelligens hallusinerer. Oppdiktede rettskilder har allerede forekommet\u00a0[for domstolen i USA](https://advokatwatch.no/nyheter/legaltech/article16154112.ece).\u00a0I slutten av mars ble det ogs\u00e5 avdekket at en[\u00a0rapport om skolestrukturen i Troms\u00f8](https://www.nrk.no/tromsogfinnmark/brukte-ki-for-a-lage-ny-skolestruktur-i-tromso_-flere-feil-oppdaget-1.17359090)\u00a0inneholdt fiktive kilder.\n\nDette er likevel f\u00f8rste gang hallusinasjonsproblematikken kommer p\u00e5 spissen i Norges H\u00f8yesterett.\u00a0\n\n\u00d8ie",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 953,
+    "title": "Deepfake Videos of Barbara O\u2019Neill Allegedly Used in Health Scam Targeting Social Media Users",
+    "short_description": "Deepfake videos of Barbara O\u2019Neill, an Australian alternative health advocate banned from giving medical advice, have allegedly been used in fraudulent social media ads promoting false health cures. They include treatments for prostate issues and erectile dysfunction. These manipulated videos have been widely circulated across African countries. The scam directs users to deceptive websites, potentially for phishing or financial fraud. O\u2019Neill has denied involvement.",
+    "primary_report_text_excerpt": "**IN SHORT:** A video circulating on social media purports to show disgraced Australian \u201cnaturopath\u201d Barbara O\u2019Neill endorsing a cure for prostate problems and erectile dysfunction. But there are clues that the video is a deepfake, advertising multiple scams.\n\nBarbara O\u2019Neill is no stranger to [fact-checkers](https://fullfact.org/health/herbal-diabetes-cure/) [around](https://factcheck.afp.com/doc.afp.com.36FF6QJ) [the world](https://www.poynter.org/fact-checking/2024/deepfake-video-falsely-pitches-dietary-supplement-created-with-pfizer-as-diabetes-remedy/), and Africa Check has previously [debunked](https://africacheck.org/fact-checks/reports/curing-depression-burns-and-cancer-why-you-shouldnt-trust-these-evergreen) several health claims from the self-described [naturopath](https://web.archive.org/web/20230310145741/https://www.hccc.nsw.gov.au/ArticleDocuments/216/Statement%20of%20Decision%20-%20Mrs%20Barbara%20ONeill.pdf.aspx).\u00a0\n\nThe latest videos featuring O\u2019Neill appear in a series of popular Facebook posts, including [one](https://www.facebook.com/100066370843968/videos/1810054616465278/) from November 2024 circulating in South Africa, with over a million views at time of writing. Its caption reads: \u201cProstatitis will disappear forever! Read the article.\u201d\n\nThe video starts with low-resolution footage of O\u2019Neill appearing to say: \u201cYour erection will return and remain strong even after 80 if you take one capsule before bed.\u201d\u00a0\n\n[Numerous](https://www.facebook.com/10008886864",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 836,
+    "title": "Sichuan Province Beset by Numerous Fabricated AI-Generated Reports of Disasters and Crises",
+    "short_description": "In Sichuan, AI tools were reportedly used to create and disseminate false reports across various cities, including fabricated stories of landslides, earthquakes, standoffs, accidents, and health-related incidents. These AI-driven rumors misled the public, caused alarm and confusion, and strained local authorities. The alleged perpetrators sought social media engagement and financial gain through clickbait content. The authorities in Sichuan ultimately levied administrative penalties against the perpetrators.",
+    "primary_report_text_excerpt": "\u5c01\u9762\u65b0\u95fb\u8bb0\u8005 \u82df\u6625\n\n\u8fd1\u5e74\u6765\uff0cAI\u7684\u6587\u672c\u3001\u56fe\u50cf\u751f\u6210\u529f\u80fd\uff0c\u88ab\u4e00\u4e9b\u4e0d\u6cd5\u5206\u5b50\u7528\u6765\u7f16\u8f91\u865a\u5047\u4fe1\u606f\uff0c\u964d\u4f4e\u4e86\u4e0d\u6cd5\u4eba\u5458\u9020\u8c23\u3001\u4f20\u8c23\u7684\u95e8\u69db\u30027\u670823\u65e5\uff0c\u5c01\u9762\u65b0\u95fb\u8bb0\u8005\u4ece\u56db\u5ddd\u7701\u516c\u5b89\u5385\u7f51\u7edc\u5b89\u5168\u4fdd\u536b\u603b\u961f\u83b7\u6089\uff0c\u5bf9\u6b64\uff0c\u56db\u5ddd\u7f51\u8b66\u79ef\u6781\u884c\u52a8\uff0c\u4e25\u5389\u6574\u6cbb\u6d89AI\u7c7b\u7f51\u7edc\u8c23\u8a00\uff0c\u5e76\u516c\u5e0310\u8d77AI\u9020\u8c23\u5178\u578b\u6848\u4f8b\u3002\n\n\u6848\u4f8b\u4e00\uff1a\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u5c71\u4f53\u6ed1\u5761\u81f48\u4eba\u9047\u96be\"\u7f51\u7edc\u8c23\u8a00\n\n![](http://k.sinaimg.cn/n/sinakd20240723s/235/w1080h2355/20240723/8563-36923678cf87aa5e676d2a3d0b2df013.jpg/w700d1q75cms.jpg)\n\n\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u5c71\u4f53\u6ed1\u5761\u81f48\u4eba\u9047\u96be\"\u7f51\u7edc\u8c23\u8a00\n\n2024\u5e741\u670823\u65e5\uff0c\u6709\u7f51\u6c11\u5728\u67d0\u5e73\u53f0\u53d1\u5e03\u6587\u7ae0\u79f0\uff1a\"\u4e91\u5357\u5c71\u4f53\u6ed1\u5761\u707e\u5bb3 \u5df2\u81f48\u4eba\u9047\u96be\"\u3002\u7ecf\u67e5\uff0c\u8fdd\u6cd5\u884c\u4e3a\u4eba\u6768\u67d0\u67d0\u4e3a\u83b7\u53d6\u6d41\u91cf\u725f\u5229\uff0c\u641c\u96c6\u7f51\u7edc\u4e0a\u7684\u76f8\u5173\u4fe1\u606f\u540e\uff0c\u5229\u7528AI\u8f6f\u4ef6\u751f\u6210\u4e86\"\u4e91\u5357\u5c71\u4f53\u6ed1\u5761\u707e\u5bb3 \u5df2\u81f48\u4eba\u9047\u96be\"\u7684\u865a\u5047\u65b0\u95fb\u4fe1\u606f\uff0c\u5e76\u53d1\u5e03\u5728\u7f51\u7edc\u5e73\u53f0\u4e0a\uff0c\u9020\u6210\u4e0d\u826f\u793e\u4f1a\u5f71\u54cd\u3002\u76ee\u524d\uff0c\u56db\u5ddd\u5e7f\u5143\u516c\u5b89\u673a\u5173\u5df2\u4f9d\u6cd5\u5bf9\u6768\u67d0\u67d0\u8fdb\u884c\u884c\u653f\u5904\u7f5a\u3002\n\n\u6848\u4f8b\u4e8c\uff1a\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u559c\u5fb7\u53bf\u5730\u9707\"\u7f51\u7edc\u8c23\u8a00\n\n![](http://k.sinaimg.cn/n/sinakd20240723s/98/w404h494/20240723/3957-f999573545fc26b7821576f3438489cc.jpg/w700d1q75cms.jpg)\n\n\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u559c\u5fb7\u53bf\u5730\u9707\"\u7f51\u7edc\u8c23\u8a00\n\n2024\u5e746\u67089\u65e5\uff0c\u6709\u7f51\u6c11\u5728\u67d0\u89c6\u9891\u5e73\u53f0\u53d1\u5e03\u89c6\u9891\u79f0\uff0c\"5\u670827\u65e5\uff0c\u56db\u5ddd\u7701\u51c9\u5c71\u5f5d\u65cf\u81ea\u6cbb\u5dde\u53d1\u751f5.0\u7ea7\u5730\u9707\uff0c\u9707\u4e2d\u4f4d\u4e8e\u559c\u5fb7\u53bf\uff0c\u5730\u9707\u6ce2\u4ee5\u6bcf\u5c0f\u65f680\u516c\u91cc\u7684\u901f\u5ea6\u4f20\u64ad\u3002\u5730\u9707\u9020\u6210\u4e86\u5927\u91cf\u623f\u5c4b\u635f\u574f\u548c\u4eba\u5458\u4f24\u4ea1\uff0c\u707e\u60c5\u4e25\u91cd\"\u3002\u7ecf\u67e5\uff0c5\u670827\u65e5\u51c9\u5c71\u53d1\u751f5.0\u7ea7\u5730\u9707\uff0c\u9707\u4e2d\u4f4d\u4e8e\u6728\u91cc\u53bf\uff0c\u65e0\u4eba\u5458\u4f24\u4ea1\uff0c\u90e8\u5206\u623f\u5c4b\u53d7\u635f\uff0c\u8fdd\u6cd5\u884c\u4e3a\u4eba\u7f57\u67d0\u67d0\u4e3a\u5438\u5f15\u773c\u7403\u3001\u83b7\u53d6\u6d41\u91cf\uff0c\u5229\u7528AI\u8f6f\u4ef6\u751f\u6210\u865a\u5047\u5730\u9707\u707e\u60c5\u56fe\u7247\uff0c\u5e76\u5728\u67d0\u77ed\u89c6\u9891\u5e73\u53f0\u6563\u5e03\u4e0d\u5b9e\u4fe1\u606f\u3002\u76ee\u524d\uff0c\u56db\u5ddd\u51c9\u5c71\u516c\u5b89\u673a\u5173\u5df2\u4f9d\u6cd5\u5bf9\u7f57\u67d0\u67d0\u8fdb\u884c\u884c\u653f\u5904\u7f5a\u3002\n\n\u6848\u4f8b\u4e09\uff1a\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u5df4\u4e2d\u8b66\u6c11\u5bf9\u5cd9\"\u7f51\u7edc\u8c23\u8a00\n\n![](http://k.sinaimg.cn/n/sinakd20240723s/560/w1080h1080/20240723/70ac-ffb23ed7c7f968a313236bdb99ac0789.jpg/w700d1q75cms.jpg)\n\n\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u5df4\u4e2d\u8b66\u6c11\u5bf9\u5cd9\"\u7f51\u7edc\u8c23\u8a00\n\n2024\u5e745\u670818\u65e5\uff0c\u6709\u7f51\u6c11\u5728\u67d0\u5e73\u53f0\u53d1\u5e03\u6587\u7ae0\u79f0\uff1a\"\u5df4\u4e2d\u5e02\u6700\u8fd1\u4e0a\u6f14\u4e86\u4e00\u573a\u4ee4\u4eba\u60ca\u5fc3\u52a8\u9b44\u7684\u4e8b\u4ef6\uff0c\u4e00\u8f86\u8fd0\u949e\u8f66\u906d\u5230\u8e22\u7206\uff0c\u8b66\u6c11\u53cc\u65b9\u5c55\u5f00\u4e86\u4e00\u573a\u6fc0\u70c8\u7684\u5bf9\u5cd9\u3002\"\u7ecf\u67e5\uff0c4\u670830\u65e5\u4e0a\u53489\u65f6\u8bb8\uff0c\u5728\u56db\u5ddd\u5df4\u4e2d\u7684\u4e00\u8f86\u8fd0\u949e\u8f66\u56e0\u5728\u516c\u4ea4\u8f66\u7ad9\u724c\u5904\u5360\u9053\u505c\u7559\uff0c\u4ea4\u8b66\u53d1\u73b0\u540e\u8bf7\u8fd0\u949e\u8f66\u9a76\u79bb\u3002\u8fdd\u6cd5\u4eba\u5458\u5c1a\u67d0\u67d0\u5728\u7f51\u4e0a\u83b7\u6089\u76f8\u5173\u56fe\u7247\u540e\uff0c\u4e3a\u5438\u5f15\u773c\u7403\uff0c\u83b7\u53d6\u6d41\u91cf\u548c\u5229\u76ca\uff0c\u5e26\u7740\u4fa5\u5e78\u5fc3\u7406\uff0c\u5728\u672a\u7ecf\u6838\u5b9e\u7684\u60c5\u51b5\u4e0b\u4f7f\u7528\"AI\u5343\u6587\"\u751f\u6210\u6807\u9898\u4e3a\u300a\u4e00\u573a\u60ca\u5fc3\u52a8\u9b44\u7684\"\u949e\u7968\u5927\u6218\" \u5df4\u4e2d\u5e02\u8b66\u6c11\u5bf9\u5cd9\u5f15\u53d1\u8f70\u52a8 \u8c01\u5c06\u6210\u4e3a\u80dc\u5229\u8005\u300b\u7684\u865a\u5047\u4fe1\u606f\u5e76\u53d1\u5e03\uff0c\u8bef\u5bfc\u7f51\u6c11\uff0c\u5f15\u53d1\u793e\u4f1a\u6050\u614c\uff0c\u6270\u4e71\u516c\u5171\u79e9\u5e8f\u3002\u76ee\u524d\uff0c\u56db\u5ddd\u5df4\u4e2d\u516c\u5b89\u673a\u5173\u5df2\u4f9d\u6cd5\u5bf9\u5c1a\u67d0\u67d0\u8fdb\u884c\u884c\u653f\u5904\u7f5a\u3002\n\n\u6848\u4f8b\u56db\uff1a\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u4e5d\u65ec\u8001\u4eba\u906d\u513f\u5973\u9057\u5f03\"\u7f51\u7edc\u8c23\u8a00\n\n![](http://k.sinaimg.cn/n/sinakd20240723s/610/w1080h1130/20240723/5262-059d2d830b08a87f62a3995630a954bb.jpg/w700d1q75cms.jpg)\n\n\u5229\u7528AI\u8f6f\u4ef6\u7f16\u9020\"\u4e5d\u65ec\u8001\u4eba\u906d\u513f\u5973\u9057\u5f03\"\u7f51\u7edc\u8c23\u8a00\n\n2024\u5e746\u670824\u65e5\uff0c\u6709\u7f51\u6c11\u5728\u67d0\u5e73\u53f0\u53d1",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 23,
+    "title": "Las Vegas Self-Driving Bus Involved in Accident",
+    "short_description": "A self-driving public shuttle by Keolis North America and Navya was involved in a collision with a human-driven delivery truck in Las Vegas, Nevada on its first day of service.",
+    "primary_report_text_excerpt": "A truck driver is blamed for the accident, which passengers say could have been avoided if the autonomous vehicle had only reversed\n\nIt took less than two hours for Las Vegas\u2019s brand new self-driving shuttle to end up in a crash on Wednesday \u2013 thanks to a human.\n\nThe autonomous bus made its debut on public roads around the so called Innovation District in downtown Las Vegas in front of cameras and celebrities, dubbed America\u2019s first self-driving shuttle pilot project geared toward the public. But within two hours it had already been involved in a minor crash with a lorry. No injuries were reported.\n\nJenny Wong, a passenger on the shuttle at the time of the crash, told local news station KSNV: \u201cThe shuttle just stayed still. And we were like, it\u2019s going to hit us, it\u2019s going to hit us. And then it hit us.\n\n\u201cThe shuttle didn\u2019t have the ability to move back. The shuttle just stayed still.\u201d\n\nLas Vegas police officer Aden Ocampo-Gomez said the truck\u2019s driver was at fault for the crash and was cited for illegal backing.\n\n\u201cThe shuttle did what it was supposed to do, in that its sensors registered the truck and the shuttle stopped to avoid the accident,\u201d the city said in a statement. \u201cUnfortunately the delivery truck did not stop and grazed the front fender of the shuttle. Had the truck had the same sensing equipment that the shuttle has, the accident would have been avoided.\u201d\n\nThe oval-shaped shuttle can seat up to eight people and has an attendant and computer monitor, but no steer",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 31,
+    "title": "Driverless Train in Delhi Crashes due to Braking Failure",
+    "short_description": "A driverless metro train in Delhi, India crashed during a test run due to faulty brakes.",
+    "primary_report_text_excerpt": "We have in the past seen instances such as the failure of Microsoft bot Tay, when it developed a tendency to come up with racist remarks. Within 24 hours of its existence and interaction with people, it starting sending offensive comments, and went from \u201chumans are super cool\u201d to being almost a Nazi.\n\nWhile on one hand, chatbots, robots and conversational platforms are finding their niche in many companies, these technological advancements are also turning mainstream to become the face of the company. But many times they end up failing and disappointing us. While most of the times these technologies fail because companies don\u2019t clearly define their purpose, others could be pure technical glitches.\n\nHere we list some of the tech failures from last year that hint that the companies need to work harder and keep coming up with better and improved versions of their innovations.\n\n1. When Facebook\u2019s Chatbots Developed Their Own Language\n\nAs scary as it may sound, \u201cBob\u201d and \u201cAlice\u201d, the chatbots created by Facebook had to be shut down as the duo started communicating in their own language, defying human generated algorithms.\n\nThe bots were originally developed to learn how to negotiate, by mimicking human trading and bartering, but when they were paired to trade against each other, they started to learn their own bizarre form of communication. Though they were designed to communicate in English, they developed their own mysterious language that humans couldn\u2019t crack.\n\nBob: i can i i ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 106,
+    "title": "Korean Chatbot Luda Made Offensive Remarks towards Minority Groups",
+    "short_description": "A Korean interactive chatbot was shown in screenshots to have used derogatory and bigoted language when asked about lesbians, Black people, and people with disabilities.",
+    "primary_report_text_excerpt": "Artificial intelligence-based chatbot Lee Luda, which ended this month in ethical and data collection controversy, faces lawsuits on charges of violating personal information.\n\nOn Friday, around 400 people filed a class action suit against the creator of the chatbot, Seoul-based startup Scatter Lab, claiming their personal information was leaked in the process of developing and providing the service.\n\nLaunched on Dec. 23, Lee Luda, an AI chatbot service designed to imitate a 20-year-old college student, instantly drew over 400,000 users with its ability to communicate in a human-like manner. But the service ended only a week later, after numerous issues were raised with the bot, such as discriminatory expressions, personal information protection and artificial intelligence ethics.\n\n\u201cWe will close the applications (today) and review later whether to collect additional victims,\u201d Taerim, the law firm representing the victims, said Friday\n\nThe defendants submitted an application for preservation of evidence against Scatterlab with the Seoul Eastern District Court the day before. They asked the court to ensure that Scatter Lab preserved the database built using users\u2019 KakaoTalk conversations as evidence for their case.\n\nScatter Lab collected KakaoTalk conversations of users through its relationship analysis apps Science of Love and Text At to create Lee Luda. After collecting about 10 billion KakaoTalk conversations, 100 million of them are thought to have been collected and used ",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 171,
+    "title": "Traffic Camera Misread Text on Pedestrian's Shirt as License Plate, Causing UK Officials to Issue Fine to an Unrelated Person",
+    "short_description": "A Bath resident was wrongly fined by the local officials because an automated license plate recognition camera misread the text on her shirt as a license plate number.",
+    "primary_report_text_excerpt": "The purpose of automating any task is to reduce cost and labor. This is one of the reasons the world is working so hard on robotaxis, and why traffic enforcement in large cities has moved to license-plate reading traffic cameras. In both cases, accuracy and reliability seem to be the biggest problems.\n\nDavid and Paula Knight found this out the hard way when they opened a letter containing a fine levied against their Volkswagen Transporter van, which had allegedly committed a traffic violation more than 120 miles away from their home in Surrey, England. But upon closer inspection, the couple noticed that the camera had made a mistake, and that the photographic evidence included in the letter wasn't of their van, or any vehicle at all.\n\nAs it turns out, the traffic camera had actually snapped a photo of a pedestrian. The woman in the photo was walking in the bus lane, an offense that would normally result in a driver receiving a fine. The traffic camera recognized her novelty shirt's text, \"KNITTER,\" which was partially obscured by the strap of her bag.\n\nPaula bought her husband David a personalized number plate for their Transporter that reads \"KN19 TER,\" a nod to David Knight's nickname Knighter, which he says is the name that all of his friends know him as. Apparently, this was similar enough to match the Volkswagen's license plate and trigger the false-positive.\n\nOfficials in Bath who issued the fine via the automated system say that the incident occurred in June, and while",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1036,
+    "title": "Purported AI-Manipulated News Clip Fabricates Explosion and Doctor's Murder Plot for Scam",
+    "short_description": "A purported AI-manipulated video falsely showing Citizen TV anchor Swaleh Mdoe reporting on the bombing of a Kenyan doctor's home circulated widely on Facebook. The video reportedly used AI-generated audio and visuals to fabricate a conspiracy in which pharmaceutical companies targeted the doctor for promoting a \"miracle cure.\" In reality, the explosion footage was from Ohio, the doctor was fictitious, and the content aimed to manipulate viewers into purchasing an unproven health product.",
+    "primary_report_text_excerpt": "**IN SHORT:** A viral Facebook video claims that a Kenyan doctor's house has been destroyed in an explosion linked to his criticism of pharmaceutical companies. It also shows him promoting a \"miracle cure\" for unnamed chronic diseases. But the video is a deepfake.\n\nA\u00a0[video](https://www.facebook.com/61551661915266/posts/8919709048064173/?rdid=V5iG7zchId0UN8eB \"(opens in a new window)\")\u00a0making rounds on Facebook starts with\u00a0[Citizen TV](https://x.com/citizentvkenya \"(opens in a new window)\")\u00a0news anchor Swaleh Mdoe seemingly presenting the 7pm news bulletin in English.\u00a0\n\nThe text at the bottom of the screen reads: \"Attack on Doctor: Pharmaceutical companies under suspicion.\"\n\nThe segment is about a doctor named Kiprono Chepkurui, whose house has been destroyed in an explosion, allegedly due to his outspoken criticism of pharmaceutical companies.\u00a0\n\nThe video then moves from Mdoe to \"Dr Chepkurui\", who claims pharmaceutical companies are a \"mafia\" and want to kill him. He alleges that the companies sell pills that don't help people.\n\nHe also claims that people aged 45 and above have clogged blood vessels that need cleaning. He then promotes a product that he claims cleanses the blood vessels and does wonders, such as immediately normalising blood pressure.\u00a0\n\nHe goes on to say that \"9 out of 10 chronic conditions resolve themselves\". He then urges people watching the video on Facebook to click on a link to learn more about the product, which he claims is affordable, safe and fast",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 163,
+    "title": "Facebook\u2019s Hate Speech Detection Algorithms Allegedly Disproportionately Failed to Remove Racist Content towards Minority Groups",
+    "short_description": "Facebook\u2019s hate-speech detection algorithms was found by company researchers to have under-reported less common but more harmful content that was more often experienced by minority groups such as Black, Muslim, LGBTQ, and Jewish users.",
+    "primary_report_text_excerpt": "Last year, researchers at Facebook showed executives an example of the kind of hate speech circulating on the social network: an actual post featuring an image of four female Democratic lawmakers known collectively as \u201cThe Squad.\u201d\n\nThe poster, whose name was scrubbed out for privacy, referred to the women, two of whom are Muslim, as \u201cswami rag heads.\u201d A comment from another person used even more vulgar language, referring to the four women of color as \u201cblack c---s,\u201d according to internal company documents exclusively obtained by The Washington Post.\n\nThe post represented the \u201cworst of the worst\u201d language on Facebook \u2014 the majority of it directed at minority groups, according to a two-year effort by a large team working across the company, the document said. The researchers urged executives to adopt an aggressive overhaul of its software system that would primarily remove only those hateful posts before any Facebook users could see them.\n\nBut Facebook\u2019s leaders balked at the plan. According to two people familiar with the internal debate, top executives including Vice President for Global Public Policy Joel Kaplan feared the new system would tilt the scales by protecting some vulnerable groups over others. A policy executive prepared a document for Kaplan that raised the potential for backlash from \u201cconservative partners,\u201d according to the document. The people spoke to The Post on the condition of anonymity to discuss sensitive internal matters.\n\nThe previously unreported deba",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 514,
+    "title": "Turnitin's ChatGPT-Detection Tool Falsely Flagged Student Essays as AI-Generated",
+    "short_description": "Turnitin's tool to detect writing generated by ChatGPT was reported for incorrectly flagging high school students' original essays as AI-generated, accusations of which are argued as reinforcement of bias from teachers due to the inability to compare against source documents.",
+    "primary_report_text_excerpt": "High school senior Lucy Goetz got the highest possible grade on an original essay she wrote about socialism. So imagine her surprise when I told her that a new kind of educational software I\u2019ve been testing claimed she got help from artificial intelligence.\n\nA new AI-writing detector from Turnitin \u2014 whose software is already used by 2.1 million teachers to spot plagiarism \u2014 flagged the end of her essay as likely being generated by\u00a0[ChatGPT](https://www.washingtonpost.com/technology/2022/12/10/chatgpt-ai-helps-written-communication/?itid=lk_inline_manual_4).\n\n\"Say what?\" says Goetz, who swears she didn't use the AI writing tool to cheat. \"I'm glad I have good relationships with my teachers.\"\n\nAfter months of\u00a0[sounding the alarm](https://www.washingtonpost.com/education/2022/12/28/chatbot-cheating-ai-chatbotgpt-teachers/?itid=lk_inline_manual_6)\u00a0about students using AI apps that can churn out essays and assignments, teachers are getting AI technology of their own. On April 4, Turnitin is activating the software I tested for some 10,700 secondary and higher-educational institutions, assigning \"generated by AI\" scores and sentence-by-sentence analysis to student work. It joins a handful of other free detectors already online. For many teachers I've been hearing from, AI detection offers a weapon to deter a 21st-century form of cheating.\n\nBut AI alone won't solve the problem AI created. The flag on a portion of Goetz's essay was an outlier, but shows detectors can sometimes get it",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 577,
+    "title": "Bankrate's Resumption of AI-Generated Content Allegedly Continuing to Produce Inaccurate and Misleading Information",
+    "short_description": "Bankrate, and its sister site CNET, both owned by Red Ventures, resumed publishing AI-generated articles claiming thorough human fact-checking. However, new articles are alleged to contain numerous factual errors, including inaccurate statistics and misleading information. Despite public criticism, the company defended its use of AI and blamed out-of-date datasets for the errors. In addition to the errors, the incident raises questions about the ethical use of AI in journalism, especially given the company's insistence on \"fact-checked\" content.",
+    "primary_report_text_excerpt": "The finance site _Bankrate_ has started publishing AI-generated articles again, and it _insists_ that this time they've been meticulously fact-checked by a human journalist before being published.\n\n\"This article was generated using automation technology and thoroughly edited and fact-checked by an editor on our editorial staff,\" reads a message at the bottom of the new AI articles, while a separate assurance claims that a \"dedicated team of Bankrate editors\" work to \"thoroughly edit and fact-check the content, ensuring that the information is accurate, authoritative and helpful to our audience.\"\n\nIt would make sense for the site's leadership to be deeply concerned with getting every detail right.\n\nAfter _Bankrate_ and its sister site _CNET_ first [started publishing](https://futurism.com/the-byte/cnet-publishing-articles-by-ai) AI-generated articles late last year, _Futurism_ found that the articles were [riddled with factual errors](https://futurism.com/cnet-ai-errors) and even seemingly [plagiarized material](https://futurism.com/cnet-ai-plagiarism). The _Washington Post_ [called](https://www.washingtonpost.com/media/2023/01/17/cnet-ai-articles-journalism-corrections/) the affair a \"journalistic disaster,\" and the _LA Times_ [quipped](https://www.latimes.com/business/story/2023-01-25/this-artificial-intelligence-chatbot-turns-out-to-be-an-idiot-and-plagiarist) that the AI's behavior would \"get a human student expelled or a journalist fired.\" _CNET_ and _Bankrate_ \u2014 both own",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1426,
+    "title": "Perplexity AI Reportedly Misstated CLL Research, Allegedly Contributing to Delayed Treatment and Prolonged Suffering",
+    "short_description": "Joseph Neal Riley reportedly used Perplexity AI to self-diagnose a rare complication of chronic lymphocytic leukemia (CLL) and, based on that output, allegedly delayed an oncologist-recommended Ven-Obi treatment for about a year. His son, Benjamin Riley, alleges that Perplexity misstated the medical research it cited, a conclusion he purportedly later confirmed with the study's authors. ",
+    "primary_report_text_excerpt": "First, thank you to everyone who reached out to me over the holidays to offer their condolences on my father's passing. One touching consequence of writing a newsletter is receiving words of support from people I've never met in person, a connection with those who might otherwise be strangers but for having read what I've shared here. I am deeply appreciative for your kind words, they've meant a lot during my grieving.\n\nAlong those same lines, I hope you'll forgive me if I spend one more week telling you about my dad, because as you'll soon learn, AI played a bizarre role both in fostering our relationship and, perhaps, in hastening his death. To understand what happened will require that I share with you some intimate details about who he was and who I am, things he struggled with and the struggles between us, and how the intersection of his curiosity with this new technology proved to be one of my most vexing challenges over the last year.\n\nSo, to start: My father was trained as a neuroscientist. He received his PhD in 1977 from the University of Florida, which explains the odd fact that I was born in Gainesville, a city I've yet to ever visit (my parents moved away when I just a few weeks old). After he completed his post-doc in southern California, my family moved to Long Island so he could join the newly formed department of neurology at SUNY Stony Brook as an assistant professor. Over the next several years, he published around 50 research articles, predominately on the",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  },
+  {
+    "incident_id": 1064,
+    "title": "Alleged AI-Generated Scam Uses Bank of Cyprus Branding to Solicit Investments",
+    "short_description": "An alleged fraudulent online platform presented as the \"Bank of Cyprus Trading AI Platform\" was promoted using reportedly fabricated media, including a video that appeared to depict the Bank's CEO endorsing the service. The video reportedly used misleading branding, including the BBC logo, and promised unrealistic investment returns. The Bank of Cyprus publicly denied any affiliation and warned customers about the use of AI-generated content in the scam.",
+    "primary_report_text_excerpt": "The Bank of Cyprus said on Thursday it is taking proactive measures to prevent online scams while fake news about a fraudulent lucrative platform linked to the bank have been circulating online.\n\nThe fraudulent AI platform marketed as the '**Bank of Cyprus Trading AI Platform', promises to earn users a guaranteed \u20ac15,000 a month**, requiring only a minimal deposit of \u20ac250.\n\nThe fake platform has been promoted online, with misleading advertisements featuring a fabricated video in which Bank of Cyprus CEO, Panicos Nicolaou, supposedly discusses the platform's success.\n\nThe video, which bears the BBC logo, claims that more than 30,000 Cypriots are already using the platform, each earning \u20ac15,000 per month with little to no effort. According to the fake video, the platform operates automatically on stock and foreign exchange markets, providing a steady passive income without the need for human intervention.\u00a0**The video also claims that 30,000 new users are joining the platform every day, and that the minimum deposit required to get started is just \u20ac250**.\n\nIn addition to the fake video, the scam has been promoted through other fabricated content, including images allegedly showing Panicos Nicolaou posting about the platform on his Twitter account, as well as photos purportedly taken at bank branches to suggest a \"phenomenal buzz\" surrounding the platform's launch.\n\n**The Bank of Cyprus has categorically denied any involvement with the platform, reiterating that these claims are e",
+    "your_codes": {
+      "warning_signal": "<short string or null>",
+      "failure_mode": "<one of: data_bias|model_error|spec_gap|oversight_failure|misuse>",
+      "deployment_context": {
+        "sector": "<string e.g. healthcare|transportation|finance|public_safety|media_content>",
+        "situational_factor": "<one of: vulnerable_population|high_stakes_decision|public_facing|safety_critical|automated_at_scale|low_oversight>"
+      },
+      "harm": "<one of: physical|economic|discriminatory|psychological|reputational|informational>",
+      "missed_intervention_stage": "<null OR one of: warning_signal|failure_mode|deployment_context>"
+    }
+  }
+]
