@@ -1,8 +1,8 @@
 // Loads pathways.json and orchestrates linked viz + filtering.
-import { renderSankey } from "./sankey.js?v=9";
-import { renderHeatmap } from "./heatmap.js?v=9";
-import { renderDetail } from "./detail-panel.js?v=9";
-import { renderTimeline } from "./timeline.js?v=9";
+import { renderSankey } from "./sankey.js?v=10";
+import { renderHeatmap } from "./heatmap.js?v=10";
+import { renderDetail } from "./detail-panel.js?v=10";
+import { renderTimeline } from "./timeline.js?v=10";
 
 const HARM_COLORS = {
   physical: "var(--harm-physical)",

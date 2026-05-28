@@ -37,7 +37,7 @@ export function renderHeatmap(el, allRows, filter, onCellClick) {
   // Push low rates into a darker part of the scale so text stays readable.
   const color = d3.scaleSequential(d3.interpolateOranges).domain([-0.1, 0.6]);
 
-  // Row labels (sectors)
+  // Row labels (sectors). Active row (matching filter.sector) is bolded + accented.
   svg
     .append("g")
     .attr("transform", `translate(${margin.left - 8}, ${margin.top})`)
@@ -48,10 +48,13 @@ export function renderHeatmap(el, allRows, filter, onCellClick) {
     .attr("dy", "0.35em")
     .attr("text-anchor", "end")
     .attr("class", "axis-label")
+    .style("fill", (d) => (filter.sector === d ? "var(--accent)" : null))
+    .style("font-weight", (d) => (filter.sector === d ? 700 : null))
     .text((d) => d.replace(/_/g, " "));
 
-  // Column labels (failure modes). rotated 35° with right-side anchor so the
+  // Column labels (failure modes). rotated -40° with right-side anchor so the
   // text grows up-and-right from the cell edge, not down-and-right into clipping.
+  // Active column (matching filter.failure_mode) is bolded + accented.
   svg
     .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top + sectors.length * cellSize + 14})`)
@@ -61,7 +64,43 @@ export function renderHeatmap(el, allRows, filter, onCellClick) {
     .attr("class", "axis-label")
     .attr("text-anchor", "end")
     .attr("transform", (_, i) => `translate(${i * cellSize + cellSize / 2}, 0) rotate(-40)`)
+    .style("fill", (d) => (filter.failure_mode === d ? "var(--accent)" : null))
+    .style("font-weight", (d) => (filter.failure_mode === d ? 700 : null))
     .text((d) => d.replace(/_/g, " "));
+
+  // Highlight band for the active row (when filter.sector is set without failure_mode).
+  if (filter.sector && sectors.includes(filter.sector)) {
+    const si = sectors.indexOf(filter.sector);
+    svg
+      .append("rect")
+      .attr("x", margin.left - 4)
+      .attr("y", margin.top + si * cellSize - 2)
+      .attr("width", cellSize * FAILURE_MODES.length + 4)
+      .attr("height", cellSize - 2 + 4)
+      .attr("fill", "none")
+      .attr("stroke", "var(--accent)")
+      .attr("stroke-width", 2)
+      .attr("rx", 3)
+      .style("pointer-events", "none");
+  }
+
+  // Highlight band for the active column (when filter.failure_mode is set).
+  if (filter.failure_mode) {
+    const fi = FAILURE_MODES.indexOf(filter.failure_mode);
+    if (fi >= 0) {
+      svg
+        .append("rect")
+        .attr("x", margin.left + fi * cellSize - 2)
+        .attr("y", margin.top - 4)
+        .attr("width", cellSize - 2 + 4)
+        .attr("height", cellSize * sectors.length + 4)
+        .attr("fill", "none")
+        .attr("stroke", "var(--accent)")
+        .attr("stroke-width", 2)
+        .attr("rx", 3)
+        .style("pointer-events", "none");
+    }
+  }
 
   // Cells
   const g = svg.append("g").attr("transform", `translate(${margin.left}, ${margin.top})`);
