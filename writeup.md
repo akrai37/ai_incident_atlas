@@ -78,6 +78,21 @@ We expect the subjective stages (`situational_factor`, `missed_intervention_stag
 
 These align with intuition and serve as a sanity check on the extraction. but the *Sankey* shows the more interesting story: how warning signals fan out through failure modes and re-converge on harm types.
 
+## Interactive visualization design
+
+The CSEN 377 rubric explicitly requires the visualization to be "intelligent AND interactive," with filters, hover, dropdowns, timelines, click categories, search, and trend comparison. The system implements all of these:
+
+- **Timeline mini-chart** at the top showing incidents per year (1996–2026). The full-data distribution is rendered in pale grey as a persistent backdrop; the current filter's counts overlay in accent orange. Clicking any year bar filters the entire dashboard to that year; clicking again clears.
+- **Four dropdown filters**: sector, country, failure mode, and harm. All filters compose (AND).
+- **Search box** that filters incidents by title or rationale keyword substring.
+- **Heatmap cell click** filters Sankey + detail list to the (sector × failure-mode) intersection. Empty cells (count = 0) are visually disabled to prevent dead clicks.
+- **Sankey hover** shows incident counts on each link and node via `<title>` tooltips.
+- **Incident list click** reveals the full per-incident chain in the detail panel, with the missed-intervention stage outlined in accent color.
+- **Active-filter chip strip** in the status line ("filters: healthcare · 2024 · 'covid'") so the current view state is always legible.
+- **Reset button** clears all six filter dimensions at once.
+
+The combination supports both **exploratory** workflows (open the page, scan for hotspots) and **directed** ones (e.g. "show me healthcare incidents in India in 2024 that ended in economic harm").
+
 ## Design rationale
 
 - **Sankey for the hero viz.** The escalation framing is intrinsically about *flow* between stages; Sankey is the textbook-correct chart for that. Width = incident count along each path.
@@ -102,6 +117,51 @@ The plan's sustainability angle is "institutional memory of missed interventions
 2. **Regulatory scoping.** A regulator drafting AI rules for, say, finance can filter to that sector and see that the dominant failure mode is misuse rather than model error. pointing toward enforcement (against bad actors) rather than just engineering standards.
 
 Both reuse cases depend on the project's distinguishing claim: that *how* incidents escalate, not just *what* incidents exist, is what informs future prevention.
+
+## Evaluation plan
+
+The project is evaluated along three dimensions, in order of weight per the course rubric:
+
+**1. Data quality (30%).** Verified through:
+- The 480/480 successful extraction rate (zero schema-violation retries) reported in §"Extraction."
+- The per-stage blind-self-validation accuracy table in §"Blind self-validation." We expect failure mode and harm to score ≥85%, and the subjective fields (situational_factor, missed_intervention_stage) to score 60–75%. Reporting them per-stage prevents the strong fields from masking weakness in the differentiating ones.
+- Internal consistency checks: Sankey flow totals match incident counts; heatmap cell counts sum to sample size; date and country fields parse correctly for ≥98% of rows.
+
+**2. Visualization implementation (45%).** Self-evaluation criteria:
+- **Clarity.** Every chart has a header, axis labels, and meaningful color encoding. The harm column color palette ties physical to warm orange, discriminatory to purple, etc., giving each chain ending semantic meaning at a glance.
+- **Consistency.** All filters compose; all linked views update synchronously; the active-filter chip strip is the single source of truth for the current state.
+- **Aesthetic.** Single-page layout with a typographic hero, three colored stat tiles, and a unified warm-cream palette. Accessibility-aware contrast on heatmap cell labels (text outline halo against any background color).
+- **Originality.** The "escalation pathway" framing is the project's contribution; most AIID-based visualizations re-skin the existing taxonomy. The deliberately nullable `missed_intervention_stage` field, framed in the UI as a finding rather than a gap, is the unique design choice.
+
+**3. Demonstration in report + presentation (25%).** This document covers the methodology, design, validation, and limitations. The accompanying 10-minute class presentation walks through one representative incident (e.g., the Cigna PXDX algorithm) chain end-to-end to make the abstract pathway concrete; the recorded video does the same.
+
+A future inter-rater study with a second human coder (rather than blind self-validation) would be the most direct way to strengthen the methodology section's claim. We did not run that study within the project timeline; we frame the current numbers honestly as "blind self-validation" and call out the limitation.
+
+## Discussion and future work
+
+**Three observations the dataset surfaces:**
+
+1. **The shape of harm is industry-locked.** Finance incidents almost always end in economic harm via misuse (90% / 81%); transportation incidents almost always end in physical harm, most often via model error (86% / 62%). This is intuitive but the Sankey makes it visible at a glance and invites the followup question: which industries have the *most* spread-out harm profiles, and why?
+2. **The dominant failure mode is misuse, not model error.** Across all 480 sampled incidents, `misuse` is the most common failure mode (~32% of cases). This challenges a common assumption that AI safety is mostly about model correctness; in this sample, it's mostly about who is using AI to do harm to whom. The implications for policy (enforcement-shaped) differ from the implications for engineering (alignment-shaped).
+3. **47% of incidents have no documented precursor.** This is the most uncomfortable finding. Half the time, the source report doesn't mention anyone seeing the failure coming. Whether that's a real absence (no one was watching) or a reporting artifact (journalists didn't ask) is impossible to disentangle from this data alone.
+
+**Future work directions** (in approximate order of feasibility):
+
+1. **Second-coder validation.** Recruit one more human coder to independently code the same 30 incidents, then compute Cohen's kappa. Converts "blind self-validation" into a real inter-rater agreement number.
+2. **Country / regulatory cluster analysis.** With country tagged on 354/480 incidents, the next step is to ask whether escalation pathways differ by jurisdiction: do EU-deployed AI systems have different warning-signal documentation rates than US ones, given GDPR/AI-Act-driven disclosure norms?
+3. **Time-series of the missed-intervention rate.** Does the proportion of incidents with documented warnings rise over years, as deployment monitoring matures, or stay flat?
+4. **Bring back the heuristic sectors as a second sample.** Re-extract pathways over the remaining ~1,000 unsampled AIID incidents using the same prompt and compare distributions against the 480-sample to validate that our stratified subset isn't itself a selection artifact.
+5. **Plug into deployment-time tooling.** The reuse case mentioned under sustainability (pre-deployment review) becomes more concrete with an API: given a candidate deployment context (sector + situational factor), retrieve the historical pathway distribution. A team about to ship a healthcare model targeting vulnerable populations would get back a one-page "here is what has failed for systems like yours" briefing.
+
+## References
+
+1. McGregor, S. (2021). Preventing repeated real world AI failures by cataloging incidents: The AI Incident Database. *Proceedings of the Thirty-Third Annual Conference on Innovative Applications of Artificial Intelligence (IAAI-21)*. Virtual Conference.
+2. AI Incident Database. https://incidentdatabase.ai · weekly snapshot dated 2026-05-25.
+3. Anthropic. (2026). *Claude Sonnet 4.6 model card.* Used as the extraction LLM for 480 incidents in this project.
+4. Center for Security and Emerging Technology (CSET). (2023). *CSETv1 AI Incident Taxonomy.* https://incidentdatabase.ai/taxonomies/cset
+5. MIT AI Risk Repository. (2024). Risk Domain Classification. https://airisk.mit.edu/
+6. Bostock, M. (2011). D3: Data-Driven Documents. *IEEE Transactions on Visualization and Computer Graphics, 17*(12), 2301–2309.
+7. d3-sankey (Bostock, M.). https://github.com/d3/d3-sankey · Used for the escalation Sankey diagram.
 
 ## File map
 
