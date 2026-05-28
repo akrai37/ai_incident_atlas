@@ -8,3 +8,4 @@ node_modules/
 data/raw/aiid_snapshot.tar.bz2
 data/raw/mongodump_full_snapshot/
 data/extracted/handcoded.json
+*.pptx

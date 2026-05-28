@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>AI Incident Atlas · Escalation Pathways</title>
-<link rel="stylesheet" href="styles.css?v=9" />
+<link rel="stylesheet" href="styles.css?v=10" />
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
 </head>
@@ -54,13 +54,36 @@
   </section>
 
   <section id="controls">
-    <label>Sector:
+    <label>Sector
       <select id="sector-filter">
         <option value="all">All sectors</option>
       </select>
     </label>
-    <button id="reset">Reset filters</button>
+    <label>Country
+      <select id="country-filter">
+        <option value="all">All countries</option>
+      </select>
+    </label>
+    <label>Failure mode
+      <select id="failure-filter">
+        <option value="all">All failure modes</option>
+      </select>
+    </label>
+    <label>Harm
+      <select id="harm-filter">
+        <option value="all">All harms</option>
+      </select>
+    </label>
+    <label class="search-wrap">Search
+      <input id="search" type="search" placeholder="Title or keyword" />
+    </label>
+    <button id="reset">Reset</button>
     <span id="status"></span>
+  </section>
+
+  <section id="timeline-wrap">
+    <h2>Incidents over time <span class="hint">(click a bar to filter to that year)</span></h2>
+    <div id="timeline"></div>
   </section>
 
   <section id="charts">
@@ -92,6 +115,6 @@
   </section>
 </main>
 
-<script type="module" src="src/data-loader.js?v=7"></script>
+<script type="module" src="src/data-loader.js?v=8"></script>
 </body>
 </html>

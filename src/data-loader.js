@@ -1,7 +1,8 @@
 // Loads pathways.json and orchestrates linked viz + filtering.
-import { renderSankey } from "./sankey.js?v=7";
-import { renderHeatmap } from "./heatmap.js?v=7";
-import { renderDetail } from "./detail-panel.js?v=7";
+import { renderSankey } from "./sankey.js?v=8";
+import { renderHeatmap } from "./heatmap.js?v=8";
+import { renderDetail } from "./detail-panel.js?v=8";
+import { renderTimeline } from "./timeline.js?v=8";
 
 const HARM_COLORS = {
   physical: "var(--harm-physical)",
@@ -12,9 +13,19 @@ const HARM_COLORS = {
   informational: "var(--harm-informational)",
 };
 
+const FAILURE_MODES = ["data_bias", "model_error", "spec_gap", "oversight_failure", "misuse"];
+const HARMS = ["physical", "economic", "discriminatory", "psychological", "reputational", "informational"];
+
 const state = {
   all: [],
-  filter: { sector: "all", failure_mode: null },
+  filter: {
+    sector: "all",
+    country: "all",
+    failure_mode: "all",
+    harm: "all",
+    year: null,
+    search: "",
+  },
   selectedIncidentId: null,
 };
 
@@ -25,51 +36,132 @@ async function init() {
       "Could not load pathways.json. run scripts/extract.py first.";
     return;
   }
-  let raw = await resp.json();
-  // Drop any rows with extraction errors
+  const raw = await resp.json();
   state.all = raw.filter((r) => !r._error && r.failure_mode && r.harm);
 
-  // Populate sector filter
-  const sectors = Array.from(
-    new Set(state.all.map((d) => d.deployment_context?.sector).filter(Boolean))
-  ).sort();
-  const sel = document.getElementById("sector-filter");
-  for (const s of sectors) {
-    const opt = document.createElement("option");
-    opt.value = s;
-    opt.textContent = s.replace(/_/g, " ");
-    sel.appendChild(opt);
-  }
-  sel.addEventListener("change", () => {
-    state.filter.sector = sel.value;
-    state.filter.failure_mode = null;
-    refresh();
-  });
-  document.getElementById("reset").addEventListener("click", () => {
-    state.filter = { sector: "all", failure_mode: null };
-    sel.value = "all";
-    refresh();
-  });
-
+  setupControls();
   refresh();
 }
 
+function setupControls() {
+  const sectorSel = document.getElementById("sector-filter");
+  const countrySel = document.getElementById("country-filter");
+  const failureSel = document.getElementById("failure-filter");
+  const harmSel = document.getElementById("harm-filter");
+  const search = document.getElementById("search");
+  const reset = document.getElementById("reset");
+
+  const sectors = Array.from(
+    new Set(state.all.map((d) => d.deployment_context?.sector).filter(Boolean))
+  ).sort();
+  for (const s of sectors) {
+    sectorSel.appendChild(opt(s, s.replace(/_/g, " ")));
+  }
+
+  const countries = Array.from(
+    new Set(state.all.map((d) => d.country).filter(Boolean))
+  ).sort((a, b) => {
+    // Put "unspecified" last
+    if (a === "unspecified") return 1;
+    if (b === "unspecified") return -1;
+    return a.localeCompare(b);
+  });
+  for (const c of countries) countrySel.appendChild(opt(c, c));
+
+  for (const f of FAILURE_MODES) failureSel.appendChild(opt(f, f.replace(/_/g, " ")));
+  for (const h of HARMS) harmSel.appendChild(opt(h, h));
+
+  sectorSel.addEventListener("change", () => {
+    state.filter.sector = sectorSel.value;
+    refresh();
+  });
+  countrySel.addEventListener("change", () => {
+    state.filter.country = countrySel.value;
+    refresh();
+  });
+  failureSel.addEventListener("change", () => {
+    state.filter.failure_mode = failureSel.value;
+    refresh();
+  });
+  harmSel.addEventListener("change", () => {
+    state.filter.harm = harmSel.value;
+    refresh();
+  });
+  search.addEventListener("input", () => {
+    state.filter.search = search.value.trim().toLowerCase();
+    refresh();
+  });
+  reset.addEventListener("click", () => {
+    state.filter = {
+      sector: "all",
+      country: "all",
+      failure_mode: "all",
+      harm: "all",
+      year: null,
+      search: "",
+    };
+    sectorSel.value = "all";
+    countrySel.value = "all";
+    failureSel.value = "all";
+    harmSel.value = "all";
+    search.value = "";
+    refresh();
+  });
+}
+
+function opt(value, label) {
+  const o = document.createElement("option");
+  o.value = value;
+  o.textContent = label;
+  return o;
+}
+
 function applyFilter(rows) {
+  const f = state.filter;
   return rows.filter((r) => {
-    if (state.filter.sector !== "all" && r.deployment_context?.sector !== state.filter.sector)
-      return false;
-    if (state.filter.failure_mode && r.failure_mode !== state.filter.failure_mode)
-      return false;
+    if (f.sector !== "all" && r.deployment_context?.sector !== f.sector) return false;
+    if (f.country !== "all" && r.country !== f.country) return false;
+    if (f.failure_mode !== "all" && r.failure_mode !== f.failure_mode) return false;
+    if (f.harm !== "all" && r.harm !== f.harm) return false;
+    if (f.year != null) {
+      const y = (r.date || "").slice(0, 4);
+      if (Number(y) !== f.year) return false;
+    }
+    if (f.search) {
+      const hay = (r.title + " " + (r.rationale || "")).toLowerCase();
+      if (!hay.includes(f.search)) return false;
+    }
     return true;
   });
 }
 
 function refresh() {
   const filtered = applyFilter(state.all);
-  document.getElementById("status").textContent =
-    `${filtered.length} of ${state.all.length} incidents shown`;
+  const activeBits = [];
+  if (state.filter.sector !== "all") activeBits.push(state.filter.sector.replace(/_/g, " "));
+  if (state.filter.country !== "all") activeBits.push(state.filter.country);
+  if (state.filter.failure_mode !== "all") activeBits.push(state.filter.failure_mode.replace(/_/g, " "));
+  if (state.filter.harm !== "all") activeBits.push(state.filter.harm);
+  if (state.filter.year != null) activeBits.push(String(state.filter.year));
+  if (state.filter.search) activeBits.push(`"${state.filter.search}"`);
+  const statusEl = document.getElementById("status");
+  statusEl.textContent =
+    `${filtered.length} of ${state.all.length} incidents` +
+    (activeBits.length ? ` · filters: ${activeBits.join(" · ")}` : "");
 
-  // Sankey: hide when too sparse
+  // Timeline
+  renderTimeline(
+    document.getElementById("timeline"),
+    state.all,
+    filtered,
+    state.filter.year,
+    (year) => {
+      state.filter.year = year;
+      refresh();
+    }
+  );
+
+  // Sankey
   const sankeyEl = document.getElementById("sankey");
   const emptyEl = document.getElementById("sankey-empty");
   if (filtered.length < 5) {
@@ -77,19 +169,28 @@ function refresh() {
     emptyEl.hidden = false;
     emptyEl.textContent =
       `${filtered.length} incident${filtered.length === 1 ? "" : "s"} match this filter. ` +
-      `too few for a meaningful flow. See the incidents listed below.`;
+      `Too few for a meaningful flow. See the incidents listed below.`;
   } else {
     emptyEl.hidden = true;
     renderSankey(sankeyEl, filtered, HARM_COLORS);
   }
 
-  // Heatmap: always renders against full dataset; highlight current selection
-  renderHeatmap(document.getElementById("heatmap"), state.all, state.filter, (sector, fm) => {
-    state.filter.sector = sector;
-    state.filter.failure_mode = fm;
-    document.getElementById("sector-filter").value = sector;
-    refresh();
-  });
+  // Heatmap (always on full dataset; cell selection mirrors current filter)
+  renderHeatmap(
+    document.getElementById("heatmap"),
+    state.all,
+    {
+      sector: state.filter.sector === "all" ? null : state.filter.sector,
+      failure_mode: state.filter.failure_mode === "all" ? null : state.filter.failure_mode,
+    },
+    (sector, fm) => {
+      state.filter.sector = sector;
+      state.filter.failure_mode = fm;
+      document.getElementById("sector-filter").value = sector;
+      document.getElementById("failure-filter").value = fm;
+      refresh();
+    }
+  );
 
   // Incident list + detail
   renderDetail(
