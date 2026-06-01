@@ -8,10 +8,12 @@ const STAGE_LABEL = {
   harm: "Harm",
 };
 
-export function renderSankey(el, rows, harmColors) {
+export function renderSankey(el, rows) {
   el.innerHTML = "";
   const width = el.clientWidth || 720;
   const height = 460;
+  const cohortTotal = rows.length || 1;
+  const share = (value) => `${Math.round((value / cohortTotal) * 100)}%`;
 
   // Build node + link sets
   const nodeMap = new Map();
@@ -64,7 +66,7 @@ export function renderSankey(el, rows, harmColors) {
     .sankey()
     .nodeWidth(14)
     .nodePadding(18)
-    .extent([[210, 20], [width - 150, height - 10]]);
+    .extent([[210, 20], [width - 178, height - 10]]);
 
   const graph = sankey({
     nodes: nodes.map((d) => ({ ...d })),
@@ -109,7 +111,7 @@ export function renderSankey(el, rows, harmColors) {
     })
     .attr("stroke-width", (d) => Math.max(1, d.width))
     .append("title")
-    .text((d) => `${d.source.label} → ${d.target.label}: ${d.value}`);
+    .text((d) => `${d.source.label} → ${d.target.label}: ${d.value} incidents (${share(d.value)} of current selection)`);
 
   // Nodes
   const nodeG = svg.append("g").selectAll("g").data(graph.nodes).join("g").attr("class", "node");
@@ -127,7 +129,7 @@ export function renderSankey(el, rows, harmColors) {
         : "#3b4252"
     )
     .append("title")
-    .text((d) => `${d.label} (${d.value})`);
+    .text((d) => `${d.label}: ${d.value} incidents (${share(d.value)} of current selection)`);
 
   // Label placement by stage:
   //   warning (col 1): to the LEFT of the node
@@ -137,14 +139,13 @@ export function renderSankey(el, rows, harmColors) {
   // This alternation guarantees labels don't collide with neighboring columns.
   const sideForStage = { warning: "left", failure: "right", context: "right", harm: "right" };
 
-  // Split label into at most 2 lines if it's long; suffix the count "(N)" onto the
-  // last line so the value stays close to the name.
+  // Keep visible node labels concise; percentages remain available on hover
+  // and in the Current Selection Summary above the charts.
   const wrap = (label, value) => {
     const full = `${label} (${value})`;
-    if (full.length <= 16) return [full];
+    if (full.length <= 22) return [full];
     const words = label.split(" ");
-    if (words.length === 1) return [`${label}`, `(${value})`];
-    // Two-line: roughly half the words on each line, count on second line.
+    if (words.length === 1) return [label, `(${value})`];
     const mid = Math.ceil(words.length / 2);
     return [words.slice(0, mid).join(" "), `${words.slice(mid).join(" ")} (${value})`];
   };

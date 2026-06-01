@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>AI Incident Atlas · Escalation Pathways</title>
-<link rel="stylesheet" href="styles.css?v=11" />
+<link rel="stylesheet" href="styles.css?v=15" />
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
 </head>
@@ -20,7 +20,7 @@
       <p class="lede">
         Every incident is modeled as a four-stage chain:
         <strong>warning&nbsp;→&nbsp;failure&nbsp;→&nbsp;context&nbsp;→&nbsp;harm</strong>.
-        480 incidents from the AI Incident Database, five sectors, one shape.
+        480 incident reports from the AI Incident Database, compared across five study sectors.
       </p>
     </div>
     <div class="stat-strip">
@@ -30,11 +30,11 @@
       </div>
       <div class="stat">
         <div class="stat-num">53<span class="pct">%</span></div>
-        <div class="stat-label">Document a <strong>missed intervention</strong> point</div>
+        <div class="stat-label">Include a documented <strong>missed intervention</strong> point</div>
       </div>
       <div class="stat">
         <div class="stat-num">480</div>
-        <div class="stat-label">Incidents extracted with Claude · 5 sectors</div>
+        <div class="stat-label">Incident pathways extracted with Claude · 5 study sectors</div>
       </div>
     </div>
   </div>
@@ -45,10 +45,9 @@
     <div id="try-this">
       <span class="badge">Try this</span>
       <p>
-        Filter sector to <strong>transportation</strong>: nearly every chain ends in
-        physical harm, most often via model error (86% physical, 62% model error).
-        Then switch to <strong>finance</strong>: nearly every chain ends in economic
-        harm via misuse (90% economic, 81% misuse). <em>The shape of harm differs by industry.</em>
+        Select <strong>transportation</strong>, then switch to <strong>finance</strong> to see how their dominant harm and failure pathways differ.
+        Use the <strong>Current Selection Summary</strong> for exact percentages, then switch the heatmap to <strong>Missed intervention stage</strong>
+        to examine where earlier action was documented as missed.
       </p>
     </div>
   </section>
@@ -60,8 +59,8 @@
       </select>
     </label>
     <label>Compare sector
-      <select id="compare-filter">
-        <option value="none">(off)</option>
+      <select id="compare-filter" disabled title="Select a primary sector first">
+        <option value="none">Select a sector first</option>
       </select>
     </label>
     <label>Country
@@ -74,9 +73,19 @@
         <option value="all">All failure modes</option>
       </select>
     </label>
+    <label>Context
+      <select id="context-filter">
+        <option value="all">All contexts</option>
+      </select>
+    </label>
     <label>Harm
       <select id="harm-filter">
         <option value="all">All harms</option>
+      </select>
+    </label>
+    <label>Missed intervention
+      <select id="intervention-filter">
+        <option value="all">All stages</option>
       </select>
     </label>
     <label class="search-wrap">Search
@@ -84,6 +93,17 @@
     </label>
     <button id="reset">Reset</button>
     <span id="status"></span>
+  </section>
+
+  <section id="selection-summary" aria-live="polite">
+    <div class="summary-header">
+      <div>
+        <p class="summary-kicker">Current selection summary</p>
+        <h2 id="summary-title" class="summary-title">All selected incidents</h2>
+      </div>
+      <p id="summary-note" class="summary-note"></p>
+    </div>
+    <div id="summary-metrics" class="summary-metrics"></div>
   </section>
 
   <section id="timeline-wrap">
@@ -94,11 +114,25 @@
   <section id="charts">
     <div id="sankey-wrap">
       <h2>Escalation Sankey</h2>
+      <p class="chart-subtitle">Documented warning status → failure mode → situational context → resulting harm. Hover over nodes or flows for counts and share of the current selection.</p>
       <div id="sankey"></div>
       <div id="sankey-empty" hidden></div>
     </div>
     <div id="heatmap-wrap">
-      <h2>Sector × Failure mode (row-normalized)</h2>
+      <div class="heatmap-header">
+        <div>
+          <h2 id="heatmap-title">Sector × Failure Mode</h2>
+          <p id="heatmap-subtitle" class="chart-subtitle">
+            Within each sector, what share of incidents fell into each failure category?
+          </p>
+        </div>
+        <label class="heatmap-mode-control">Compare by
+          <select id="heatmap-mode">
+            <option value="failure_mode">Failure mode</option>
+            <option value="missed_intervention_stage">Missed intervention stage</option>
+          </select>
+        </label>
+      </div>
       <div id="heatmap"></div>
     </div>
   </section>
@@ -112,14 +146,14 @@
   <section id="limitations">
     <h3>About this view</h3>
     <ul>
-      <li>Sample of 480 incidents stratified across 5 sectors (transportation, media/content, public safety, healthcare, finance) drawn from the AI Incident Database.</li>
-      <li>Pathway stages extracted by Claude (Sonnet 4.6) from incident reports, with blind self-validation on a 30-incident subset (see writeup).</li>
-      <li>The <em>missed intervention stage</em> is annotated only when the source text documents a specific prior warning or skipped check. For roughly 47% of incidents it is null, meaning the report itself does not describe a precursor that anyone saw and ignored. That null rate is a finding, not a gap.</li>
-      <li>AIID is biased toward English-language, US/EU, consumer-facing incidents; this view inherits that bias.</li>
+      <li>Sample of 480 incidents selected across five study sectors: transportation, media/content, public safety, healthcare, and finance.</li>
+      <li>Claude extracted structured pathway annotations from incident reports. A 30-incident human-validation procedure is prepared for final verification; its results are not yet reported here.</li>
+      <li><em>Not documented</em> means the extraction did not identify a clearly documented prior warning or skipped check in the source report; it does not prove that prevention was impossible.</li>
+      <li>AIID reporting coverage may overrepresent English-language, US/EU, or publicly reported consumer-facing incidents; this view inherits those limitations.</li>
     </ul>
   </section>
 </main>
 
-<script type="module" src="src/data-loader.js?v=11"></script>
+<script type="module" src="src/data-loader.js?v=15"></script>
 </body>
 </html>
