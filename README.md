@@ -318,3 +318,8 @@ This project treats sustainability as **responsible, long-term AI deployment**. 
 ## Data Source
 
 - AI Incident Database (AIID): [https://incidentdatabase.ai/](https://incidentdatabase.ai/)
+
+## Live link
+
+[https://incidentatlas.ai/](https://akrai37.github.io/ai_incident_atlas/)
+
